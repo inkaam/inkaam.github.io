@@ -1,127 +1,157 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>TC Portfolio</title>
-  </head>
-  <body>
-    <h1>Ticorporate portfolio</h1>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inka Männikkö - TC Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    p, ul {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .project {
+      background-color: #e9e9e9;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ticorporate Portfolio</h1>
     <h2>Inka Männikkö</h2>
-    <h3>
-      Tietojenkäsittely tradenomi opiskelija JAMK:issa
-    </h3>
-    <div>
-      <h3>Mikä on Ticorporate?</h3>
-      <p>
-        Ticorporate on JAMKin opintojakso, jossa opiskelijat toteuttavat
-        ulkopuolisia toimeksiantoja tai kehittävät omia sovelluksia ja pelejä.
-        Oppimisympäristö jäljittelee työelämää, ja käytetyt teknologiat
-        vastaavat alan käytäntöjä.
-      </p>
-      <h3>Ennen Ticorporatea</h3>
-      <p>Taitotasoni:</p>
-      <p>
-        Ennen Ticorporate projektia tekninen taitotasoni oli kohtalainen. Osasin Frontendin
-        perusteet ja olin yhdistänyt Frontendin ja Backendin toimivaksi
-        kokonaisuudeksi Backend 1 -kurssin lopputyössä, jossa toteutin
-        sisäänkirjautumisen, rekisteröitymisen sekä ajanvarausjärjestelmän.
-        Ticorporate opintojaksolta toivoin erityisesti kehittymistä ja lisää
-        itsevarmuutta tekemiseeni.
-      </p>
-      <p>Tavoitteeni:</p>
-      <p>
-        Asetin itselleni tavoitteeksi koodaajana kehittymisen ja Frontend
-        koodaajan roolin sekä sen vastuiden paremman ymmärtämisen isommassa
-        projektissa.
-      </p>
-    </div>
+    <h3>Tietojenkäsittely tradenomi opiskelija JAMK:issa</h3>
+  </header>
 
+  <section class="section">
+    <h3>Mikä on Ticorporate?</h3>
+    <p>
+      Ticorporate on JAMKin opintojakso, jossa opiskelijat toteuttavat ulkopuolisia toimeksiantoja tai kehittävät omia sovelluksia ja pelejä.
+      Oppimisympäristö jäljittelee työelämää, ja käytetyt teknologiat vastaavat alan käytäntöjä.
+    </p>
+  </section>
 
+  <section class="section">
+    <h3>Ennen Ticorporatea</h3>
+    <p><strong>Taitotasoni:</strong></p>
+    <p>
+      Ennen Ticorporate projektia tekninen taitotasoni oli kohtalainen. Osasin Frontendin perusteet ja olin yhdistänyt Frontendin ja Backendin toimivaksi kokonaisuudeksi Backend 1 -kurssin lopputyössä, jossa toteutin sisäänkirjautumisen, rekisteröitymisen sekä ajanvarausjärjestelmän.
+    </p>
+    <p><strong>Tavoitteeni:</strong></p>
+    <p>
+      Asetin itselleni tavoitteeksi koodaajana kehittymisen ja Frontend koodaajan roolin sekä sen vastuiden paremman ymmärtämisen isommassa projektissa.
+    </p>
+  </section>
+
+  <section class="section project">
     <h3>Projekti: STUNITE</h3>
     <p>
-      STUNITE on viiden tietojenkäsittelyopiskelijan Ticorporate-projekti
-      syksyltä 2024. Sovellus on suunnattu tapahtumakävijöille ja
-      -järjestäjille, tavoitteena tuoda opiskelijatapahtumat laajemmin esille ja
-      edistää eri järjestöjen välistä yhteistyötä. Järjestäjänäkymän keskeinen
-      ominaisuus on kalenteri, joka näyttää tulevat ja luonnosvaiheessa olevat
-      tapahtumat, auttaen välttämään päällekkäisiä tapahtumia.
+      STUNITE on viiden tietojenkäsittelyopiskelijan Ticorporate-projekti syksyltä 2024. Sovellus on suunnattu tapahtumakävijöille ja -järjestäjille, tavoitteena tuoda opiskelijatapahtumat laajemmin esille ja edistää eri järjestöjen välistä yhteistyötä.
     </p>
     <p>
-      Roolit projektissa jakautuivaat kahteen tekniikka osaajaan joista toisella
-      Backend ja toisella Frontend sekä sivurooleina molemmilla testaus, pilvipalveluihin keskittyvä osaaja, UI/UX
-      suunnittelija/sisällöntuottaja sekä liiketoimintaan keskittyvä osaaja.
-      Minun pääroolini tässä projektissa oli Frontend tekniikka osaaja ja
-      sivuroolissa olin testaaja.
+      Roolit projektissa jakautuivaat kahteen tekniikka osaajaan, joista toisella Backend ja toisella Frontend, sekä sivurooleina molemmilla testaus, pilvipalveluihin keskittyvä osaaja, UI/UX suunnittelija/sisällöntuottaja sekä liiketoimintaan keskittyvä osaaja. Minun pääroolini oli Frontend tekniikka osaaja ja sivuroolissa olin testaaja.
     </p>
+  </section>
 
+  <section class="section">
     <h3>Roolini vaikutus projektiin</h3>
     <p>
-      Koen, että roolini projektissamme oli aika suuri, koska toimin pääasiassa
-      yksin Frontendin kanssa. Autoimme myös toisiamme parhaamme mukaan
-      tekniikkaan keskittyvän osaajan kanssa. Sain myös myöhemmin apua sivuston CSS:ään ja sisältöön UI/UX / sisällöntuottajalta
+      Koen, että roolini projektissamme oli aika suuri, koska toimin pääasiassa yksin Frontendin kanssa. Autoimme myös toisiamme parhaamme mukaan tekniikkaan keskittyvän osaajan kanssa. Sain myös myöhemmin apua sivuston CSS:ään ja sisältöön UI/UX / sisällöntuottajalta.
     </p>
-    <div>
-      <h3>Tekemisiä</h3>
-      <p>Tänne kuvia koodista ja sivusta :)</p>
-      <p>Tapahtumien näkyvyyden muuttuminen päivämäärän ja statuksen mukaan</p>
-      <p>Suodatus ja haku nimen perusteella</p>
-      <p>Järjestäjä kalenteri</p>
-    </div>
-    <h3>Oivalluksia:</h3>
+  </section>
+
+  <section class="section">
+    <h3>Tekemisiä</h3>
+    <ul>
+      <li>Tänne kuvia koodista ja sivusta :)</li>
+      <li>Tapahtumien näkyvyyden muuttuminen päivämäärän ja statuksen mukaan</li>
+      <li>Suodatus ja haku nimen perusteella</li>
+      <li>Järjestäjä kalenteri</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3>Oivalluksia</h3>
     <ul>
       <li>Kannattaa käyttää aikaa suunnitteluun.</li>
       <li>Koodia kannattaa kommentoida hyvin, mikäli aikaa on.</li>
       <li>Koodi saattaa toimia localhostilla, mutta AWS päällä ei.</li>
-      <li>
-        Jos mahdollista, työ kannattaa deployata AWS päälle mahdollisimman pian
-        kehitysvaiheessa, jotta yllä oleva ongelma ei ilmenisi liian myöhään.
-      </li>
-      <li></li>
+      <li>Jos mahdollista, työ kannattaa deployata AWS päälle mahdollisimman pian kehitysvaiheessa, jotta yllä oleva ongelma ei ilmenisi liian myöhään.</li>
     </ul>
+  </section>
+
+  <section class="section">
     <h3>Tavoitteiden toteutuminen</h3>
     <p>
-      Vaikka asetin itselle aika ympäripyöreitä tavoitteita, koen että olen
-      kehittynyt paljon Frontend koodaajana ja myös Angular on tullut
-      tutummaksi. Tavoittelin parempaa ymmärrystä Frontend koodarin hommista ja
-      vastuista, ja se kyllä tuli tavoitettua.__ Suurin osa Frontendin toiminnallisuuksista ja HTML rakenteista sekä tein myös paljon CSS tyylittelyjä.
-      Frontend oli pääasiassa kuitenkin minun vastuulla__ ja opin kuinka paljon
-      hommaa siinä voi olla isomassa projektissa yhdelle ihmiselle.
+      Vaikka asetin itselle aika ympäripyöreitä tavoitteita, koen että olen kehittynyt paljon Frontend koodaajana ja myös Angular on tullut tutummaksi. Tavoittelin parempaa ymmärrystä Frontend koodarin hommista ja vastuista, ja se kyllä tuli tavoitettua. Suurin osa Frontendin toiminnallisuuksista ja HTML rakenteista sekä tein myös paljon CSS tyylittelyjä. Frontend oli pääasiassa kuitenkin minun vastuulla ja opin kuinka paljon hommaa siinä voi olla isommassa projektissa yhdelle ihmiselle.
     </p>
     <p>
-      Projektin jälkeen jäi kiinnostamaan millaista olisi työskennellä alusta
-      alkaen Frontendiä jonkun kanssa samaan aikaan, lähinnä millaista työnjakoa
-      silloin kannattaa tehdä ja millaisia käytänteitä tarvitaan.
+      Projektin jälkeen jäi kiinnostamaan millaista olisi työskennellä alusta alkaen Frontendiä jonkun kanssa samaan aikaan, lähinnä millaista työnjakoa silloin kannattaa tehdä ja millaisia käytänteitä tarvitaan.
     </p>
+  </section>
 
-    <h3>Mitä opin:</h3>
+  <section class="section">
+    <h3>Mitä opin</h3>
     <ul>
       <li>Suodatusjuttuja</li>
-      <li>Angualrin signaaleista</li>
-      <li>Tilanhallintaa ??</li>
-      <li>
-        Työskentelyä ryhmässä, jossa jokainen keskittyy ns. omaan juttuun /
-        työskentelemään yhdessä heodän kanssa
-      </li>
-      <li></li>
+      <li>Angularin signaaleista</li>
+      <li>Tilanhallintaa</li>
+      <li>Työskentelyä ryhmässä, jossa jokainen keskittyy omaan juttuun</li>
     </ul>
-    <h3>
-      Tulevaisuus (millaisiin töihin, miten kurssi tuki tavoitteita, mitä
-      osaamista puuttuu)
-    </h3>
-    <p>
-      Tulevaisuudessa minua kiinnostaisi työskennellä Frontend hommissa, oli se
-      sitten toimintojen tai tyylien tekemistä. Minua kiinnostaa myös Frontendin
-      ja Backendin väliset yhteydet ja niiden kanssa työskentely. Olen myös
-      hyvin avoin uusille teknologioille ja työtehtäville sekä testaaminen on
-      minusta kiinnostavaa.
-    </p>
+  </section>
 
-    <h3>omat vahvuudet ja onko ne selventyneet</h3>
+  <section class="section">
+    <h3>Tulevaisuus</h3>
     <p>
-      Koen teknisen vahvuuteni olevan juurin Frontendissä, vasinkin sen
-      toiminnallisuuksien ja tyylien luomisessa.
+      Tulevaisuudessa minua kiinnostaisi työskennellä Frontend-hommissa, oli se sitten toimintojen tai tyylien tekemistä. Minua kiinnostaa myös Frontendin ja Backendin väliset yhteydet ja niiden kanssa työskentely. Olen myös hyvin avoin uusille teknologioille ja työtehtäville sekä testaaminen on minusta kiinnostavaa.
     </p>
-    <p>Olen myös hyvä ryhmätyöskentelyssä ja tulen toimeen kaikkien kanssa.</p>
+  </section>
+
+  <section class="section">
+    <h3>Omat vahvuudet ja onko ne selventyneet</h3>
+    <p>
+      Koen teknisen vahvuuteni olevan juurin Frontendissä, varsinkin sen toiminnallisuuksien ja tyylien luomisessa. Olen myös hyvä ryhmätyöskentelyssä ja tulen toimeen kaikkien kanssa.
+    </p>
+  </section>
+
+  <section class="section">
     <h3>Miksi valitsin juuri nämä dokumentit/työt portfoliooni?</h3>
     <p>Valitsin kyseiset työt portfolioon, koska niiden kanssa työskennellessä opin eniten ja pääsin tekemään jotain ihan uutta.</p>
-  </body>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Inka Männikkö</p>
+  </footer>
+
+</body>
 </html>
