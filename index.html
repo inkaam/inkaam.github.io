@@ -1,158 +1,733 @@
 <!DOCTYPE html>
 <html lang="fi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inka Männikkö - TC Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f4f4f4;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inka Männikkö - TC Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: auto;
+        background-color: #f4f4f4;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      p,
+      ul {
+        font-size: 1.1em;
+        line-height: 1.6em;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+      .section {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 1000px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+      .skills-goals {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .skills,
+      .goals {
+        flex: 1;
+      }
+      .skills h3,
+      .goals h3 {
+        margin-top: 0;
+      }
+      @media (max-width: 768px) {
+        .skills-goals {
+          flex-direction: column;
+        }
+      }
+      .example {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .text-content {
+        flex: 1;
+        max-width: 50%;
+      }
+      .gif-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .gif-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-y: auto;
+        max-height: 250px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+      header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+      header {
+        position: relative;
+        height: 100vh;
+        background: url('1.png') no-repeat center center/cover;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 100px;
+      }
+
+      .background-images {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%;
+
+        height: 100%;
+        display: flex;
+        animation: scrollBackground 90s infinite linear;
+        z-index: 0;
+      }
+
+      .background-images img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        margin-right: 100px;
+      }
+
+      @keyframes scrollBackground {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-150%);
+        }
+      }
+
+      .start-text {
+        z-index: 3;
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+      }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px; 
+  width: 100%; 
+  height: auto; 
+  padding: 10px; 
+}
+
+
+.image-grid img {
+  width: 70%; 
+  height: auto; 
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.image-grid img:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="background-images">
+        <img src="images/1.png" />
+        <img src="images/4.png" />
+        <img src="images/5.png" />
+        <img src="images/13.png" />
+        <img src="images/12.png" />
+        <img src="images/9.png" />
+        <img src="images/11.png" />
+      </div>
+      <div class="start-text">
+        <h1>Ticorporate Portfolio</h1>
+        <h2>Inka Männikkö</h2>
+        <h3>
+          Tietojenkäsittelyn tutkinto-ohjelma, Jyväskylän ammattikorkeakoulu
+        </h3>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Mikä on Ticorporate?</h2>
+      <p>
+        Ticorporate on JAMKin opintojakso, jossa opiskelijat toteuttavat
+        ulkopuolisia toimeksiantoja tai kehittävät omia sovelluksia ja pelejä.
+        Oppimisympäristö jäljittelee työelämää, ja käytetyt teknologiat
+        vastaavat alan käytäntöjä.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Ennen Ticorporatea</h2>
+      <div class="skills-goals">
+        <div class="skills">
+          <h3>Taitotasoni</h3>
+          <p>
+            Ennen Ticorporate-projektia tekninen taitotasoni oli kohtalainen.
+            Osasin Frontendin perusteet ja olin yhdistänyt Frontendin ja
+            Backendin toimivaksi kokonaisuudeksi Backend 1 -kurssin lopputyössä,
+            jossa toteutin sisäänkirjautumisen, rekisteröitymisen sekä
+            ajanvarausjärjestelmän.
+          </p>
+        </div>
+        <div class="goals">
+          <h3>Tavoitteeni</h3>
+          <p>
+            Asetin itselleni tavoitteeksi kehittyä koodaajana ja ymmärtää
+            paremmin Frontend-kehittäjän roolia sekä sen vastuita suuremmassa
+            projektissa.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section project">
+      <h2>Projekti: STUNITE</h2>
+      <p>
+        STUNITE on viiden tietojenkäsittelyopiskelijan Ticorporate-projekti
+        syksyltä 2024. Sovellus on suunnattu tapahtumakävijöille ja
+        -järjestäjille, tavoitteena tuoda opiskelijatapahtumat laajemmin esille
+        ja edistää eri järjestöjen välistä yhteistyötä.
+      </p>
+      <p>
+        Projektissa roolit jakautuivat Backend- ja Frontend-kehittäjään (sivuroolina molemmilla testaus), 
+        pilvipalveluosaajaan, UI/UX-suunnittelija & sisällöntuottajaan (sivuroolina molemmilla Scrum Master) sekä 
+        liiketoimintaan keskittyvään osaajaan (sivuroolina Product Owner). Oma pääroolini oli Frontend-kehittäjä, 
+        ja sivuroolissani toimin siis testaajana.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Roolini Frontend koodarina</h2>
+      <p>
+        Frontend koodaajan rooli on tärkeä, koska ilman sitä käyttäjällä ei ole
+        mitää nähtävää tai koettavaa projektista. Roolissa pääsin
+        työskentelemään tiiviisti niin Backend osaajan kanssa, että UI/UX
+        suunnittelijan kanssa. Näin saimme yhdessä aikaan suunnitellun näköisen
+        ja backendin tietoja sekä metodeja käyttävän kokonaisuuden.
+      </p>
+      <p>
+        Oma rooli kuitenkin tuntui välillä hieman raskaalta, koska olin lähinnä
+        yksin vastuussa Frontendissä, kun kaikilla ei ollut kokemusta asiasta.
+        Autoimme kuitenkin toisiamme parhaamme mukaan toisen tekniikkaan
+        keskittyvän osaajan kanssa. Sain myös myöhemmin apua sivuston CSS:ään ja
+        sisältöön UI/UX suunnittelialta / sisällöntuottajalta.
+      </p>
+      <h2>Roolini testaajana</h2>
+      <p>
+        Toimin ryhmän toisena testaajana ja tein Frontendille yksikkötestejä
+        sekä End-To-End testausta Cypressillä. Valitettavasti testaaminen jäi
+        itsellä projektin loppuvaiheeseen, koska Frontend vei niin paljon aikaa.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Mitä sain aikaan?:</h2>
+      <div style="margin-bottom: 50px;">
+        <ul>
+          <li>Suurimman osan sivujen HTML ja CSS</li>
+          <li>Normikäyttäjän sekä järjestäjän sisään- ja uloskirjautuminen</li>
+          <li>Normikäyttäjän rekisteröityminen</li>
+          <li>Normikäyttäjän profiilisivu, jossa voi muokata tietoja</li>
+          <li>Etusivulle kolmannen osapuolen NPM paketin avulla kalenteri ja siihe näkymään tapahtumat</li>
+          <li>Järjestäjäkalenteri(sekä tapahtumat listamuodossa), jossa näkyy kaikkien järjestävien alustavat ja vahvistetut tapahtumasuunnitelmat</li>
+          <li>Tapahtuman luominen, muokkaaminen ja poistaminen mahdollisuus tapahtuman järjestsäjille</li>
+          <li>Tapahtumat -sivu, jossa tulevaisuuden julkaistut ja vahvistetut tapahtumat</li>
+          <li>Tapahtuma-arkisto -sivu, jossa menneet julkaistut ja vahvistetut tapahtumat</li>
+          <li>Haku ja filteröinti Tapahtumat ja Tapahtuma-arkisto sivuille</li>
+          <li>Järjestäjäkalenterin filteröinti</li>
+          <li>Tapahtumakohtaiset sivut jokaiselle tapahtumalle, jossa löytyy tapahtumat tiedot, linkki lipunmyyntii sekä osoite kartalla</li>
+          <li>Sivuston responsiivisuus</li>
+          <li>Pieni määrä E2E ja yksikkötestejä</li>
+        </ul>
+      </div>
+<h2>Esimerkkejä:</h2>
+      <div class="example">
+        <div class="text-content">
+          <p><strong>Tapahtumahaku suodatus:</strong></p>
+          <p>
+            UpdateFilteredEvents(eventsData: Event[]) päivittää suodatetut
+            tapahtumat käyttäjän hakutermien ja valintojen perusteella. Se myös
+            lajittelee tulokset aikajärjestykseen alkamispäivän mukaan.
+            Suodatetut tapahtumat tallennetaan filteredEventData - muuttujaan.
+          </p>
+          <pre><code>
+            updateFilteredEvents(eventsData: Event[]) {
+              this.filteredEventData = computed(() => {
+                const search = this.searchTerm().toLowerCase();
+                const city = this.selectedCity();
+                const tag = this.selectedTag();
+                const { start, end } = this.selectedDateRange();
+          
+                let filteredEvents = eventsData.filter((event) => {
+                  const matchesSearch = event.eventName.toLowerCase().includes(search);
+                  const matchesCity = city ? event.city === city : true;
+                  const matchesTag = tag ? event.eventTags?.includes(tag) : true;
+          
+                  let matchesDate = true;
+                  if (start || end) {
+                    const eventStartDate = this.parseCustomDate(event.date);
+                    matchesDate =
+                      (!start || eventStartDate >= new Date(start)) &&
+                      (!end || eventStartDate <= new Date(end));
+                  }
+          
+                  const currentDate = new Date();
+                  currentDate.setHours(0, 0, 0, 0);
+          
+                  // Use endingDate if available, otherwise fallback to event.date (starting date)
+                  const eventEndDate = event.endingDate
+                    ? this.parseCustomDate(event.endingDate)
+                    : this.parseCustomDate(event.date); // Fall back to starting date
+                  eventEndDate.setHours(0, 0, 0, 0);
+          
+                  const isFutureEvent = eventEndDate >= currentDate;
+          
+                  return (
+                    matchesSearch &&
+                    matchesCity &&
+                    matchesTag &&
+                    matchesDate &&
+                    isFutureEvent
+                  );
+                });
+          
+                filteredEvents = filteredEvents.sort((a, b) => {
+                  const dateA = this.parseCustomDate(a.date);
+                  const dateB = this.parseCustomDate(b.date);
+                  return dateA.getTime() - dateB.getTime();
+                });
+          
+                return filteredEvents;
+              });
+            }
+          </code></pre>
+        </div>
+        <div class="gif-container">
+          <img
+            src="images/suodatus_gif.gif"
+            alt="GIF, jossa demostroidaan suodatus toiminnallisuutta"
+          />
+        </div>
+      </div>
+      <hr />
+      <div class="example">
+        <div class="text-content">
+          <p><strong>Normikäyttäjän sisään- ja uloskirjautuminen:</strong></p>
+          <p>
+            Login(email: string, password: string) lähettää käyttäjän
+            sähköpostin ja salasanan kirjautumispyynnön palvelimelle ja
+            tallentaa palvelimen paulauttamat käyttäjätiedot ja tokenin
+            localStorageen. Logout() nollaa kirjautumistiedot poistamalla ne
+            localStoragesta sekä nollaa käyttäjän kirjautumisen tilan.
+          </p>
+          <pre><code>
+  // normal user login
+    login(email: string, password: string) {
+      return this.http.post
+        <{ message: string; token: string; user: any }>
+        (this.apiUrlLoginUser,{ email, password })
+            .pipe(
+              tap((response) => {
+                const user = response.user;
+                const token = response.token;
+                this.updateCurrUser(user);
+                this.currUser.set(user);
+                this.isLoggedIn.set(true);
+                localStorage.setItem('currentUser', 
+                JSON.stringify(user));
+                localStorage.setItem('token', 
+                token);
+                localStorage.setItem('userId', 
+                user.id);
+              })
+            );
+      }
+  // user logout
+    logout(): void {
+      this.isLoggedIn.set(false);
+      this.currUser.set(null);
+      this.isOrganizer.set(false);
+      if (isPlatformBrowser(this.platformId)) {
+        localStorage.removeItem('currentUser');
+        localStorage.removeItem('currentOrganizer');
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+        localStorage.removeItem('isOrganizer');
+      }
+      console.log('Logged out');
     }
-    h1, h2, h3 {
-      color: #333;
-    }
-    h1 {
-      font-size: 2em;
-    }
-    h2 {
-      font-size: 1.5em;
-    }
-    p, ul {
-      font-size: 1.1em;
-      line-height: 1.6em;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    .project {
-      background-color: #e9e9e9;
-      padding: 10px;
-      border-radius: 8px;
-    }
-    .project h3 {
-      margin-top: 0;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      margin-top: 30px;
-    }
-  </style>
-</head>
-<body>
+</code></pre>
+        </div>
+        <div class="gif-container">
+          <img
+            src="images/kirjautuminen_gif.gif"
+            alt="GIF, jossa demostroidaan normikäyttäjän sisäänkirjautumista toiminnallisuutta"
+          />
+        </div>
+      </div>
+      <hr />
+      <div class="example">
+        <div class="text-content">
+          <p>
+            <strong>Tapahtuman Alustava/Vahvistettu statuksen vaikutus:</strong>
+          </p>
+          <p>
+            getPublishedEvents() hakee tapahtumat tietokannasta, mutta suodattaa ne
+            niin, että vain vahvistetut ja julkaistut tapahtumat jäävät mukaan.
+            Tätä kutsua käytetään Tapahtumat -sivulla, jotta saadaan vain
+            julkaistut tapahtumat.
+          </p>
+          <p>
+            Järjestäjäkalenterissa on hyödynnetty värejä selkeyttämään onko
+            tapahtumalla Vahvistettu vai Alustava suunnitelma status.
+          </p>
+  <pre><code>
+            getPublishedEvents(): Observable<Event[]> {
+              return this.http.get<Event[]>(this.apiUrl).pipe(
+                map((events) =>
+                  events.filter((event) => {
+                    const now = new Date();
+                    const publishDate = new Date(event.publishDateTime);
+          
+                    return (
+                      event.status === 'Varattu' &&
+                      event.publishDateTime != null &&
+                      publishDate <= now
+                    );
+                  })
+                )
+              );
+            }
+  </code></pre>
+        </div>
+        <div class="gif-container">
+          <img
+            src="images/statukset_gif.gif"
+            alt="GIF, jossa demostroidaan alustava/vahvistettu statuksen vaikutusta"
+          />
+        </div>
+      </div>
+      <hr>
+      <div class="example">
+        <div class="text-content">
+          <p><strong>Cypress testi, Tapahtuman luominen ja poistaminen:</strong></p>
+          <p>
+            Testissä tarkistetaan, että järjestäjä voi kirjautua sisään, 
+            luoda tapahtuman syöttämällä tarvittavat tiedot, varmistaa sen 
+            näkyvyyden järjestäjän kalenterissa ja tapahtumasivulla sekä lopuksi
+             poistaa tapahtuman ja varmistaa sen katoamisen järjestelmästä.
+          </p>
+          <pre><code>
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 1);
+            
+            const formattedDate = tomorrow.toISOString().split('T')[0];
+            const formattedTime = '12:00';
+            
+            describe('Create Event', () => {
+              beforeEach(() => {
+                // go to home page
+                cy.visit('http://localhost:4200/');
+            
+                // open login modal
+                cy.get('.login-icon > .material-symbols-outlined')
+                  .should('be.visible')
+                  .click();
+            
+                // check if modal is open
+                cy.get('.modal-content').should('be.visible');
+            
+                // go to organizer log in
+                cy.get('.login-buttons > :nth-child(2)').should('be.visible').click();
+            
+                // log in credentials come from cypress.env.json
+                const email = Cypress.env('CYPRESS_ORGANIZER_EMAIL');
+                const password = Cypress.env('CYPRESS_ORGANIZER_PASSWORD');
+            
+                // write email and password
+                cy.get('#email').should('be.visible').type(email);
+                cy.get('#password').should('be.visible').type(password);
+            
+                // press log in button
+                cy.get('form.ng-dirty > button').click();
+            
+                // check if success log in toaster is visible
+                cy.get('.ng-trigger').should('be.visible');
+            
+                // check if url has /organizer-view (routes to organizer-view after succesful login)
+                cy.url().should('include', '/organizer-view');
+              });
+              
+              it('go to create event form and create event', () => {
+                // press create event button
+                cy.get('.organizer-buttons > :nth-child(1)').should('be.visible').click();
+            
+                // set name
+                cy.get('input[name="eventName"]').type('TestiTapahtumaCypress');
+            
+                // set date and time
+                cy.get('[name="eventDate"]').clear().type(formattedDate);
+                cy.get('[name="eventTime"]').clear().type(formattedTime);
+            
+                // set ending time and date
+                cy.get('input[name="endingDate"]').clear().type(formattedDate);
+                cy.get('input[name="endingtime"]').clear().type(formattedTime);
+            
+                // set city
+                cy.get('input[name="city"]').type('Helsinki');
+            
+                // set address
+                cy.get('input[name="address"]').type('Mannerheimintie 1');
+            
+                // set event venue
+                cy.get('input[name="venue"]').type('Messukeskus');
+            
+                // set event details
+                cy.get('textarea[name="details"]').type('Tämä on testitapahtuman kuvaus.');
+            
+                // set ticketprices
+                cy.get('input[name="ticketpriceMin"]').type('20');
+                cy.get('input[name="ticketpriceMax"]').type('50');
+            
+                // set ticketsale times
+                cy.get('input[name="ticketSaleStart"]').type('2024-04-01T10:00');
+                cy.get('input[name="ticketSaleEnd"]').type('2024-04-30T23:59');
+            
+                // set status
+                cy.get('select[name="status"]').select('Varattu');
+            
+                // set publish date and time
+                cy.get('input[name="publishDateTime"]').type('2024-04-01T12:00');
+            
+                // set events tags
+                cy.get('.tag-checkbox input[type="checkbox"]').first().check();
+            
+                // set event image
+                cy.get('input[type="file"]').selectFile(
+                  'cypress/fixtures/cypress-logo.jpg'
+                );
+            
+                // send form
+                cy.get('form.create-event-form').submit();
+            
+                // check if create event success toaster is visible
+                cy.get('.ng-trigger')
+                  .should('be.visible')
+                  .and('contain', 'Tapahtuman luonti onnistui.');
+            
+                // check if event is in Your events, future events container
+                cy.get('.page-container > :nth-child(3)').should(
+                  'contain',
+                  'TestiTapahtumaCypress'
+                );
+              });
+            
+              it('check that organizer calender has the created event and works', () => {
+                // go to organzier calendar
+                cy.get('.organizer-buttons > :nth-child(2)').click();
+                cy.url().should('include', '/organizer-view/organizer-calendar');
+            
+                // check if calendar is loaded and has the event
+                cy.get('.full-calendar')
+                  .should('be.visible')
+                  .contains('.fc-event-title-container', 'TestiTapahtumaCypress')
+                  .should('be.visible')
+                  .trigger('mouseover');
+            
+                // hover event and check it has information like name
+                cy.get('.event-calendar-hover')
+                  .should('be.visible')
+                  .should('contain', 'TestiTapahtumaCypress');
+                // click event and check that it goes to correct event-detail page
+                cy.get('.full-calendar')
+                  .should('be.visible')
+                  .contains('.fc-event-title-container', 'TestiTapahtumaCypress')
+                  .click();
+                cy.get('.page-container').should('contain', 'TestiTapahtumaCypress');
+              });
+            
+              it('check that event is the events page', () => {
+                cy.visit('/events');
+                cy.get('.events').should('contain', 'TestiTapahtumaCypress');
+              });
+            
+              it('delete event and check that it is gone', () => {
+                // find event element that contains TestiTapahtumaCypress event name
+                cy.get('.your-events')
+                  .contains('.event-name', 'TestiTapahtumaCypress')
+                  .parents('.your-events')
+                  .within(() => {
+                    // clicks delete button inside div that contains
+                    cy.contains('Poista').click();
+                  });
+            
+                // confirm deletion
+                cy.on('window:confirm', () => true);
+            
+                // check that event is deleted
+                cy.get('.events-div').should('not.contain', 'TestiTapahtumaCypress');
+              });
+            });
+               
+          </code></pre>
+        </div>
+        <div class="gif-container">
+          <img
+            src="images/cypress_gif.gif"
+            alt="GIF, jossa bäytetään Cypress testin suorittamista"
+          />
+        </div>
+      </div>
+      <h3>Mobiili</h3>
+      <div class="image-grid">
+        <img src="images/m1.png" alt="Image 1">
+        <img src="images/m2.png" alt="Image 2">
+        <img src="images/m3.png" alt="Image 3">
+        <img src="images/m4.png" alt="Image 4">
+        <img src="images/m5.png" alt="Image 5">
+        <img src="images/m6.png" alt="Image 6">
+      </div>
+      
+    </section>
 
-  <header>
-    <h1>Ticorporate Portfolio</h1>
-    <h2>Inka Männikkö</h2>
-    <h3>Tietojenkäsittely tradenomi opiskelija JAMK:issa</h3>
-  </header>
+    <section class="section">
+      <div class="skills-goals">
+        <div class="goals">
+          <h2>Mitä opin</h2>
+          <ul>
+            <li>
+              Työskentelyä ryhmässä, jossa jokaisella on eri ns. eri homma, eikä tehdä paljoa samaa.
+            </li>
+            <li>Vähän parempi ymmärrys Yksikkötesteistä ja miten niitä voi tehdä Angularissa.</li>
+            <li>Kolmansien osapuolien NPM pakettien hyödyntäminen isomassa projektissa. 
+              (Niiden etsiminen, testaaminen, käyttöönotta ja muokkaaminen juuri projektiin sopivaksi)</li>
+              <li> Tajuan vähän paremmin nyt Angular signaaleja ja niiden käyttöä.</li>
 
-  <section class="section">
-    <h3>Mikä on Ticorporate?</h3>
-    <p>
-      Ticorporate on JAMKin opintojakso, jossa opiskelijat toteuttavat ulkopuolisia toimeksiantoja tai kehittävät omia sovelluksia ja pelejä.
-      Oppimisympäristö jäljittelee työelämää, ja käytetyt teknologiat vastaavat alan käytäntöjä.
-    </p>
-  </section>
+          </ul>
+        </div>
+        <div class="skills">
+          <h2>Oivalluksia</h2>
+          <ul>
+            <li>Kannattaa käyttää aikaa suunnitteluun.</li>
+            <li>Koodia kannattaa kommentoida hyvin alusta asti, mikäli aikaa on.</li>
+            <li>Koodi saattaa toimia localhostilla, mutta AWS päällä ei.</li>
+            <li>
+              Jos mahdollista, työ kannattaa deployata AWS päälle mahdollisimman
+              pian kehitysvaiheessa, jotta yllä oleva ongelma ei ilmenisi liian
+              myöhään.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section class="section">
-    <h3>Ennen Ticorporatea</h3>
-    <p><strong>Taitotasoni:</strong></p>
-    <p>
-      Ennen Ticorporate projektia tekninen taitotasoni oli kohtalainen. Osasin Frontendin perusteet ja olin yhdistänyt Frontendin ja Backendin toimivaksi kokonaisuudeksi Backend 1 -kurssin lopputyössä, jossa toteutin sisäänkirjautumisen, rekisteröitymisen sekä ajanvarausjärjestelmän.
-    </p>
-    <p><strong>Tavoitteeni:</strong></p>
-    <p>
-      Asetin itselleni tavoitteeksi koodaajana kehittymisen ja Frontend koodaajan roolin sekä sen vastuiden paremman ymmärtämisen isommassa projektissa.
-    </p>
-  </section>
+    <section class="section">
+      <h2>Tavoitteiden toteutuminen</h2>
+      <p>
+        Vaikka asetin itselle aika ympäripyöreitä tavoitteita, koen että olen
+        kehittynyt paljon Frontend koodaajana ja myös Angular on tullut
+        tutummaksi. Tavoittelin parempaa ymmärrystä Frontend koodarin hommista
+        ja vastuista, ja se kyllä tuli tavoitettua. Suurin osa Frontendin
+        toiminnallisuuksista ja HTML rakenteista on tekemiäni sekä tein myös paljon CSS
+        tyylittelyjä. Frontend oli kuitenkin pääasiassa minun vastuulla ja opin
+        kuinka paljon hommaa siinä voi olla isommassa projektissa yhdelle
+        ihmiselle. 
+      </p>
+      <p>Ennen Ticorporatea pisimmät/isoimmat koodaus projektini ovat olleet Frontend sovelluskehityksen ja Backend 1 opintojaksojen lopputyöt,
+        joten Ticorporaten työmäärä tuntui mahdottoman suurelta. Siitä huolimatta olen sitä mieltä, että tein reippaasti hommia 
+        ja sain yllättävän paljon aikaan. Koen olevani paljon sujuvampi sekä itsevarmempi koodaaja kuin ennen Ticorporatea.</p>
+      <p>
+        Projektin jälkeen jäi kiinnostamaan millaista olisi työskennellä alusta
+        alkaen Frontendiä jonkun kanssa samaan aikaan, lähinnä millaista
+        työnjakoa silloin kannattaa tehdä ja millaisia käytänteitä tarvitaan.
+      </p>
+    </section>
 
-  <section class="section project">
-    <h3>Projekti: STUNITE</h3>
-    <p>
-      STUNITE on viiden tietojenkäsittelyopiskelijan Ticorporate-projekti syksyltä 2024. Sovellus on suunnattu tapahtumakävijöille ja -järjestäjille, tavoitteena tuoda opiskelijatapahtumat laajemmin esille ja edistää eri järjestöjen välistä yhteistyötä.
-    </p>
-    <p>
-      Roolit projektissa jakautuivaat kahteen tekniikka osaajaan, joista toisella Backend ja toisella Frontend, sekä sivurooleina molemmilla testaus, pilvipalveluihin keskittyvä osaaja, UI/UX suunnittelija/sisällöntuottaja sekä liiketoimintaan keskittyvä osaaja. Minun pääroolini oli Frontend tekniikka osaaja ja sivuroolissa olin testaaja.
-    </p>
-  </section>
+    <section class="section">
+      <h2>Omat vahvuudet</h2>
+      <p>
+        Vahvuuksiani ovat Frontend-kehityksessä erityisesti toiminnallisuuksien
+        luominen sekä HTML-rakenteen ja CSS-tyylittelyn hallinta. Tällä hetkellä
+        osaan Angularia, mutta uskon pystyväni oppimaan nopeasti uusia
+        Frontend-frameworkkejä. Olen myös vahva tiimityöskentelijä ja nautin
+        muiden auttamisesta. Rakastan uuden oppimista ja koodiongelmien
+        ratkomista, vaikka ne välillä tuottavatkin haasteita ja harmaita
+        hiuksia.
+      </p>
+    </section>
 
-  <section class="section">
-    <h3>Roolini vaikutus projektiin</h3>
-    <p>
-      Koen, että roolini projektissamme oli aika suuri, koska toimin pääasiassa yksin Frontendin kanssa. Autoimme myös toisiamme parhaamme mukaan tekniikkaan keskittyvän osaajan kanssa. Sain myös myöhemmin apua sivuston CSS:ään ja sisältöön UI/UX / sisällöntuottajalta.
-    </p>
-  </section>
+    <section class="section">
+      <h2>Tulevaisuus</h2>
+      <p>
+        Tulevaisuudessa minua kiinnostaisi työskennellä Frontend-hommissa, oli
+        se sitten toimintojen tai tyylien tekemistä. Minua kiinnostaa myös
+        Frontendin ja Backendin väliset yhteydet ja niiden kanssa työskentely.
+        Olen myös hyvin avoin uusille teknologioille ja työtehtäville sekä
+        testaaminen on minusta kiinnostavaa.
+      </p>
+      <p>Ticorporate auttoi minua löytämään omia vahvuuksia sekä hukassa ollutta itsevarmuutta onnistumisien myötä.
+        Ymmärrän nyt myös paremmin juuri Frontend koodaajan roolia isommassa projektissa ja että sellainen työ kiinnostaa minua.
+      </p>
+    </section>
 
-  <section class="section">
-    <h3>Tekemisiä</h3>
-    <ul>
-      <li>Tänne kuvia koodista ja sivusta :)</li>
-      <li>Tapahtumien näkyvyyden muuttuminen päivämäärän ja statuksen mukaan</li>
-      <li>Tapahtumien suodatus</li>
-      <img src="images/suodatus_gif.gif" alt="GIF, jossa demostroidaan suodatus toiminnallisuutta" width="500">
-      <li>Järjestäjä kalenteri</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Miksi valitsin juuri nuo dokumentit/työt portfoliooni?</h2>
+      <p>
+        Valitsin kyseiset työt portfolioon, koska niiden kanssa työskennellessä
+        opin eniten ja pääsin tekemään jotain ihan uutta.
+      </p>
+    </section>
 
-  <section class="section">
-    <h3>Oivalluksia</h3>
-    <ul>
-      <li>Kannattaa käyttää aikaa suunnitteluun.</li>
-      <li>Koodia kannattaa kommentoida hyvin, mikäli aikaa on.</li>
-      <li>Koodi saattaa toimia localhostilla, mutta AWS päällä ei.</li>
-      <li>Jos mahdollista, työ kannattaa deployata AWS päälle mahdollisimman pian kehitysvaiheessa, jotta yllä oleva ongelma ei ilmenisi liian myöhään.</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h3>Tavoitteiden toteutuminen</h3>
-    <p>
-      Vaikka asetin itselle aika ympäripyöreitä tavoitteita, koen että olen kehittynyt paljon Frontend koodaajana ja myös Angular on tullut tutummaksi. Tavoittelin parempaa ymmärrystä Frontend koodarin hommista ja vastuista, ja se kyllä tuli tavoitettua. Suurin osa Frontendin toiminnallisuuksista ja HTML rakenteista sekä tein myös paljon CSS tyylittelyjä. Frontend oli pääasiassa kuitenkin minun vastuulla ja opin kuinka paljon hommaa siinä voi olla isommassa projektissa yhdelle ihmiselle.
-    </p>
-    <p>
-      Projektin jälkeen jäi kiinnostamaan millaista olisi työskennellä alusta alkaen Frontendiä jonkun kanssa samaan aikaan, lähinnä millaista työnjakoa silloin kannattaa tehdä ja millaisia käytänteitä tarvitaan.
-    </p>
-  </section>
-
-  <section class="section">
-    <h3>Mitä opin</h3>
-    <ul>
-      <li>Suodatusjuttuja</li>
-      <li>Angularin signaaleista</li>
-      <li>Tilanhallintaa</li>
-      <li>Työskentelyä ryhmässä, jossa jokainen keskittyy omaan juttuun</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h3>Tulevaisuus</h3>
-    <p>
-      Tulevaisuudessa minua kiinnostaisi työskennellä Frontend-hommissa, oli se sitten toimintojen tai tyylien tekemistä. Minua kiinnostaa myös Frontendin ja Backendin väliset yhteydet ja niiden kanssa työskentely. Olen myös hyvin avoin uusille teknologioille ja työtehtäville sekä testaaminen on minusta kiinnostavaa.
-    </p>
-  </section>
-
-  <section class="section">
-    <h3>Omat vahvuudet ja onko ne selventyneet</h3>
-    <p>
-      Koen teknisen vahvuuteni olevan juurin Frontendissä, varsinkin sen toiminnallisuuksien ja tyylien luomisessa. Olen myös hyvä ryhmätyöskentelyssä ja tulen toimeen kaikkien kanssa.
-    </p>
-  </section>
-
-  <section class="section">
-    <h3>Miksi valitsin juuri nämä dokumentit/työt portfoliooni?</h3>
-    <p>Valitsin kyseiset työt portfolioon, koska niiden kanssa työskennellessä opin eniten ja pääsin tekemään jotain ihan uutta.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Inka Männikkö</p>
-  </footer>
-
-</body>
+    <footer>
+      <p style="text-align: center;">&copy; 2025 Inka Männikkö</p>
+    </footer>
+  </body>
 </html>
