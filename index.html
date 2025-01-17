@@ -359,55 +359,107 @@
       <hr />
       <div class="example">
         <div class="text-content">
-          <p><strong>Normikäyttäjän sisään- ja uloskirjautuminen:</strong></p>
+          <p><strong>Järjestäjäkalenteri:</strong></p>
           <p>
-            Login(email: string, password: string) lähettää käyttäjän
-            sähköpostin ja salasanan kirjautumispyynnön palvelimelle ja
-            tallentaa palvelimen paulauttamat käyttäjätiedot ja tokenin
-            localStorageen. Logout() nollaa kirjautumistiedot poistamalla ne
-            localStoragesta sekä nollaa käyttäjän kirjautumisen tilan.
+  eventsUpdated() hakee kaikki tapahtumat ja suodattaa ne käyttäjän valintojen perusteella. Se suodattaa tapahtumat valitun kaupungin (selectedCity), valittujen tunnisteiden (selectedTags) ja valitun järjestäjän (selectedOrganizer) perusteella. Tämän jälkeen funktio jakaa tapahtumat tuleviin ja menneisiin tapahtumiin: tulevat tapahtumat järjestetään aikajärjestykseen vanhimmasta uusimpaan, ja menneet tapahtumat järjestetään uusimmasta vanhimpaan. Lopuksi se päivittää kalenterin tapahtumatiedot suodatettujen tapahtumien perusteella. Funktio kutsutaan aina, kun käyttäjä muuttaa kaupunkia, tunnisteita tai järjestäjää (onCityChange, onTagChange, onOrganizerChange).
           </p>
           <pre><code>
-  // normal user login
-    login(email: string, password: string) {
-      return this.http.post
-        <{ message: string; token: string; user: any }>
-        (this.apiUrlLoginUser,{ email, password })
-            .pipe(
-              tap((response) => {
-                const user = response.user;
-                const token = response.token;
-                this.updateCurrUser(user);
-                this.currUser.set(user);
-                this.isLoggedIn.set(true);
-                localStorage.setItem('currentUser', 
-                JSON.stringify(user));
-                localStorage.setItem('token', 
-                token);
-                localStorage.setItem('userId', 
-                user.id);
-              })
-            );
-      }
-  // user logout
-    logout(): void {
-      this.isLoggedIn.set(false);
-      this.currUser.set(null);
-      this.isOrganizer.set(false);
-      if (isPlatformBrowser(this.platformId)) {
-        localStorage.removeItem('currentUser');
-        localStorage.removeItem('currentOrganizer');
-        localStorage.removeItem('token');
-        localStorage.removeItem('userId');
-        localStorage.removeItem('isOrganizer');
-      }
-      console.log('Logged out');
+eventsUpdated() {
+    const eventsData = this.events();
+    const currentDate = new Date();
+
+    let filteredEvents = eventsData;
+
+    if (this.selectedCity) {
+      filteredEvents = filteredEvents.filter(
+        (event) => event.city.toLowerCase() === this.selectedCity.toLowerCase()
+      );
     }
+
+    if (this.selectedTags && this.selectedTags.length > 0) {
+      filteredEvents = filteredEvents.filter((event) =>
+        event.eventTags.includes(this.selectedTags)
+      );
+    }
+
+    this.noEventsForTag = filteredEvents.length === 0;
+
+    if (this.selectedOrganizer) {
+      filteredEvents = filteredEvents.filter((event) => {
+        return (
+          event.organizationName.toLowerCase() ===
+          this.selectedOrganizer.toLowerCase()
+        );
+      });
+    }
+
+    this.upcomingEvents = filteredEvents
+      .filter((event) => {
+        const eventDate = new Date(this.formatDateToISO(event.date));
+        return eventDate >= currentDate;
+      })
+      .sort((a, b) => {
+        const dateA = new Date(
+          this.formatDateToISO(a.date) + 'T' + a.startingTime
+        );
+        const dateB = new Date(
+          this.formatDateToISO(b.date) + 'T' + b.startingTime
+        );
+        return dateA.getTime() - dateB.getTime();
+      });
+
+    this.pastEvents = filteredEvents
+      .filter((event) => {
+        const eventDate = new Date(this.formatDateToISO(event.date));
+        return eventDate < currentDate;
+      })
+      .sort((a, b) => {
+        const dateA = new Date(
+          this.formatDateToISO(a.date) + 'T' + a.startingTime
+        );
+        const dateB = new Date(
+          this.formatDateToISO(b.date) + 'T' + b.startingTime
+        );
+        return dateB.getTime() - dateA.getTime();
+      });
+
+    if (filteredEvents.length > 0) {
+      this.calendarOptions.events = filteredEvents.map((event) => ({
+        title: event.eventName,
+        date: this.formatDateToISO(event.date),
+        color: event.status === 'Varattu' ? '#fe7775' : '#f0d37c',
+        url: `/events/${event._id}`,
+        extendedProps: {
+          startingTime: event.startingTime,
+          venue: event.venue,
+          date: event.date,
+          organizationName: event.organizationName,
+          eventId: event._id,
+        },
+      }));
+    } else {
+      this.calendarOptions.events = [];
+    }
+  }
+          
+  onCityChange(city: string): void {
+    this.selectedCity = city;
+    this.eventsUpdated();
+  }
+  onTagChange(selectedTag: string): void {
+    this.selectedTags = selectedTag;
+    this.eventsUpdated();
+  }
+  onOrganizerChange(selectedOrganizer: string): void {
+    this.selectedOrganizer = selectedOrganizer;
+    this.eventsUpdated();
+  }
+
 </code></pre>
         </div>
         <div class="gif-container">
           <img
-            src="images/kirjautuminen_gif.gif"
+            src="images/järjestäjäkalenteri_gif.gif"
             alt="GIF, jossa demostroidaan normikäyttäjän sisäänkirjautumista toiminnallisuutta"
           />
         </div>
