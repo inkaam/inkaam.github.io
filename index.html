@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call,mail"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call,download,mail"
     />
     <style>
       body {
         font-family: Arial, sans-serif;
         margin: auto;
-        background-color: #C6D2ED;
+        background-color: #c6d2ed;
       }
       h1,
       h2,
@@ -97,33 +97,8 @@
         word-wrap: break-word;
       }
 
-      header {
-        position: relative;
-        height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 100px;
-      }
-
-      .header-container {
-        display: flex;
-        gap: 10%;
-        justify-content: center;
-        max-width: 80%;
-      }
-
-      .header-text {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        max-width: 45%;
-      }
-
       .header-image {
-        background-color: #AEA3B0;
+        background-color: #aea3b0;
         width: 450px;
         height: 450px;
         border-radius: 50%;
@@ -138,46 +113,103 @@
       }
 
       nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+      .nav-logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
         display: flex;
-        gap: 40px;
-        justify-content: right;
-        margin-right: 200px;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+      }
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
       }
 
       nav a {
-        background-color: #AEA3B0;
-        width: 150px;
-        border-radius: 70px;
-        text-align: center;
-        margin-top: 20px;
-        transition: all 0.2s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #333;
+        text-decoration: none;
+        font-weight: 400;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
       }
 
       nav a:hover {
-        background-color: bisque;
-        transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        color: #6366f1;
+        background-color: rgba(99, 102, 241, 0.1);
       }
 
-      .projects-buttons {
+      .project-container {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        padding: 80px 200px 250px;
+      }
+
+      .projects-cards {
         display: flex;
         justify-content: center;
       }
 
       .project {
-        background-color: #E3D0D8;
-        width: 300px;
+        background: #f4edff;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
         text-align: center;
-        border-radius: 40px;
-        padding: 2px 30px;
-        transition: all 0.2s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+      .project-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 1.5rem;
+      }
+      .project-tags {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+      .project-tag {
+        background-color: #dce3ec;
+        color: #1e40af;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+      .project-desc {
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      }
+
       .project:hover {
-        background-color: #2cb895;
-        transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(135deg, #fce7f3 0%, #e0e7ff 100%);
       }
       .project-img {
         max-width: 300px;
@@ -201,55 +233,149 @@
         align-items: center;
         gap: 8px;
         font-size: 1.1em;
+        font-weight: 500;
+        color: #374151;
       }
       .status-indicator {
         width: 12px;
         height: 12px;
-        background-color: #2cb895;
+        background-color: #10b981;
         border-radius: 50%;
-        box-shadow: 0 0 8px #2cb895;
         animation: pulse 2s infinite;
+        box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
       }
 
       .container {
-        background-color: #E7E6F7;
+        background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
         display: flex;
+        padding: 100px 300px;
+        gap: 50px;
       }
       .about-me {
         flex: 2;
-        padding: 20px;
+        padding: 20px 50px;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
       }
       .skills {
         flex: 1;
         padding: 20px;
-        border-left: 2px solid #333;
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #6366f1;
       }
+
       .contact-container {
+        background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #E7E6F7;
         margin: auto;
-        padding: 30px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 50px;
+        padding: 70px 30px;
       }
-      .github {
+
+      .contact-card {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background: white;
+        padding: 30px 60px;
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .contact-item {
         display: flex;
         align-items: center;
         gap: 10px;
       }
+
+      .github {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: -10px;
+        margin-top: 8px;
+      }
       .git-button {
-        background-color: #AEA3B0;
+        background-color: #dce3ec;
+        color: #1e40af;
         border: none;
         border-radius: 20px;
         padding: 8px 16px;
         cursor: pointer;
       }
-      .contact-item {
+
+      header {
+        min-height: 100vh;
         display: flex;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          #dbeafe 0%,
+          #e0e7ff 50%,
+          #f3e8ff 100%
+        );
+        padding: 80px 20px 20px;
+      }
+
+      .header-container {
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        width: 100%;
+      }
+
+      .header-text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        max-width: 45%;
+        gap: 20px;
+      }
+      .header-text h1,
+      h2 {
+        margin: 0;
+      }
+      .header-links {
+        display: flex;
+        gap: 12px;
+      }
+      .header-button {
+        background-color: #8a98d6;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+
+      .header-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .header-subtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #6b7280;
+        margin: 0;
+        animation: fadeInUp 1s ease-out 0.2s both;
+      }
+      .header-desc {
+        font-size: 1.125rem;
+        color: #6b7280;
+        margin: 0;
+        animation: fadeInUp 1s ease-out 0.4s both;
       }
 
       @keyframes pulse {
@@ -268,16 +394,18 @@
 
   <body>
     <nav>
-      <a href="index.html">
-        <p>Etusivu</p>
-      </a>
-      <a href="#projects"><p>Projektit</p></a>
-      <a href="#CV">
-        <p>CV</p>
-      </a>
-      <a href="#Yhteystiedot">
-        <p>Yhteystiedot</p>
-      </a>
+      <div class="nav-container">
+        <p class="nav-logo">Opiskelija portfolio</p>
+        <div class="nav-menu">
+          <a href="index.html">
+            <p>Etusivu</p>
+          </a>
+          <a href="#projects"><p>Projektit</p></a>
+          <a href="#Yhteystiedot">
+            <p>Yhteystiedot</p>
+          </a>
+        </div>
+      </div>
     </nav>
 
     <header>
@@ -286,9 +414,11 @@
           <img src="images/profile-image.jpg" />
         </div>
         <div class="header-text">
-          <h1>Inka Männikkö</h1>
-          <h2>Tietojenkäsittelyopiskelija, Fullstack -sovelluskehitys</h2>
-          <p>
+          <p class="header-title">Inka Männikkö</p>
+          <p class="header-subtitle">
+            Tietojenkäsittelyopiskelija, Fullstack -sovelluskehitys
+          </p>
+          <p class="header-desc">
             Innostunut ohjelmistokehittäjä, erikoistunut Angular- ja
             TypeScript-kehitykseen
           </p>
@@ -296,7 +426,10 @@
             <span class="status-indicator"></span>
             <span class="status-text">Etsii harjoittelupaikkaa</span>
           </div>
-          <a href="#projects">Tutustu projekteihini</a>
+          <div class="header-links">
+            <button class="header-button">Tutustu projekteihin</button>
+            <button class="header-button">Ota yhteyttä</button>
+          </div>
 
           <div class="logos">
             <img src="images/html.png" class="logo-img" style="width: 36px" />
@@ -339,42 +472,55 @@
       </div>
     </div>
 
-    <h1 style="text-align: center; margin-bottom: 50px" id="projects">
-      Projektit
-    </h1>
-    <div class="projects-buttons">
-      <a href="stunite.html">
-        <div class="project">
-          <p class="project-name">STUNITE</p>
-          <img class="project-img" src="images/1.png" />
-          <p>Tapahtumakalenteri- ja julkaisualusta</p>
-          <img src="images/typescript.png" class="logo-img" />
-          <img src="images/angular.png" class="logo-img" />
-        </div>
-      </a>
+    <div class="project-container">
+      <h1 style="text-align: center; margin-bottom: 50px" id="projects">
+        Projektit
+      </h1>
+      <div class="projects-cards">
+        <a href="stunite.html">
+          <div class="project">
+            <p class="project-name">STUNITE</p>
+            <img class="project-img" src="images/1.png" />
+            <p class="project-desc">Tapahtumakalenteri- ja julkaisualusta</p>
+            <div class="project-tags">
+              <p class="project-tag">Angular</p>
+              <p class="project-tag">Typescrip</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <h1 style="text-align: center" id="CV">CV</h1>
     <div class="contact-container">
       <h1 style="text-align: center" id="Yhteystiedot">Yhteystiedot</h1>
-      <div class="contact-item">
-        <span class="material-symbols-outlined"> mail </span>
-        <p>inka-mannikko@hotmail.com</p>
-      </div>
-      <div class="contact-item">
-        <span class="material-symbols-outlined"> call </span>
-        <p>+358 45 1234462</p>
-      </div>
-      <!-- <div>
+      <div class="contact-card">
+        <div class="contact-item">
+          <span class="material-symbols-outlined"> mail </span>
+          <p>inka-mannikko@hotmail.com</p>
+        </div>
+        <div class="contact-item">
+          <span class="material-symbols-outlined"> call </span>
+          <p>+358 45 1234462</p>
+        </div>
+        <!-- <div class="contact-item">
+        <span class="material-symbols-outlined"> download </span>
+        <button>Lataa CV</button>
+      </div> -->
+        <!-- <div>
         <a href="https://www.linkedin.com/in/inka-männikkö">
           <img src="images/linkedin-icon.png" class="logo-img" />
         </a>
       </div> -->
 
-      <div class="github">
-        <img src="images/github-icon.png" class="logo-img" />
-        <button class="git-button"><a href="https://github.com/InkaMannikko">Opiskelija GitHub</a></button>
-        <button class="git-button"><a href="https://github.com/inkaam">Henkilökohtainen GitHub</a></button>
+        <div class="github">
+          <img src="images/github-icon.png" class="logo-img" />
+          <button class="git-button">
+            <a href="https://github.com/InkaMannikko">Opiskelija GitHub</a>
+          </button>
+          <button class="git-button">
+            <a href="https://github.com/inkaam">Henkilökohtainen GitHub</a>
+          </button>
+        </div>
       </div>
     </div>
     <footer>
