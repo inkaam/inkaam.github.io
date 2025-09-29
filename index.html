@@ -118,45 +118,55 @@
         left: 0;
         right: 0;
         background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         z-index: 1000;
         transition: all 0.3s ease;
       }
-      .nav-logo {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: #333;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
+
       .nav-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 64px;
+        height: 70px;
       }
+
+      .nav-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #111827;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
       .nav-menu {
         display: flex;
         list-style: none;
         gap: 2rem;
       }
 
-      nav a {
-        color: #333;
+      .nav-link {
+        color: #374151;
         text-decoration: none;
-        font-weight: 400;
+        font-weight: 500;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         transition: all 0.3s ease;
+        position: relative;
       }
 
-      nav a:hover {
-        color: #6366f1;
-        background-color: rgba(99, 102, 241, 0.1);
+      .nav-link:hover {
+        color: #667eea;
+        background-color: rgba(102, 126, 234, 0.1);
+      }
+
+      .nav-link p {
+        margin: 0;
       }
 
       .project-container {
@@ -331,18 +341,19 @@
         gap: 5rem;
         width: 100%;
       }
+      .header-subcontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
       .header-text {
         display: flex;
         flex-direction: column;
         text-align: left;
         max-width: 45%;
-        gap: 20px;
       }
-      .header-text h1,
-      h2 {
-        margin: 0;
-      }
+
       .header-links {
         display: flex;
         gap: 12px;
@@ -360,7 +371,7 @@
         font-size: 3rem;
         font-weight: 700;
         color: #1f2937;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         animation: fadeInUp 1s ease-out;
       }
 
@@ -397,18 +408,19 @@
       <div class="nav-container">
         <p class="nav-logo">Opiskelija portfolio</p>
         <div class="nav-menu">
-          <a href="index.html">
+          <a href="#home" class="nav-link">
             <p>Etusivu</p>
           </a>
-          <a href="#projects"><p>Projektit</p></a>
-          <a href="#Yhteystiedot">
+          <a href="#about" class="nav-link"><p>Tietoa</p></a>
+          <a href="#projects" class="nav-link"><p>Projektit</p></a>
+          <a href="#contact" class="nav-link">
             <p>Yhteystiedot</p>
           </a>
         </div>
       </div>
     </nav>
 
-    <header>
+    <header id="home">
       <div class="header-container">
         <div class="header-image">
           <img src="images/profile-image.jpg" />
@@ -418,30 +430,32 @@
           <p class="header-subtitle">
             Tietojenkäsittelyopiskelija, Fullstack -sovelluskehitys
           </p>
-          <p class="header-desc">
+          <div class="header-subcontainer">
+            <!-- <p class="header-desc">
             Innostunut ohjelmistokehittäjä, erikoistunut Angular- ja
             TypeScript-kehitykseen
-          </p>
-          <div class="status">
-            <span class="status-indicator"></span>
-            <span class="status-text">Etsii harjoittelupaikkaa</span>
-          </div>
-          <div class="header-links">
-            <button class="header-button">Tutustu projekteihin</button>
-            <button class="header-button">Ota yhteyttä</button>
-          </div>
+          </p> -->
+            <div class="status">
+              <span class="status-indicator"></span>
+              <span class="status-text">Etsii harjoittelupaikkaa</span>
+            </div>
+            <div class="header-links">
+              <button class="header-button">Tutustu projekteihin</button>
+              <button class="header-button">Ota yhteyttä</button>
+            </div>
 
-          <div class="logos">
-            <img src="images/html.png" class="logo-img" style="width: 36px" />
-            <img src="images/css.png" class="logo-img" />
-            <img src="images/javascript.png" class="logo-img" />
-            <img src="images/typescript.png" class="logo-img" />
-            <img src="images/angular.png" class="logo-img" />
+            <div class="logos">
+              <img src="images/html.png" class="logo-img" style="width: 36px" />
+              <img src="images/css.png" class="logo-img" />
+              <img src="images/javascript.png" class="logo-img" />
+              <img src="images/typescript.png" class="logo-img" />
+              <img src="images/angular.png" class="logo-img" />
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="container">
+    <div class="container" id="about">
       <div class="about-me">
         <h1>Tietoa minusta</h1>
         <p>
@@ -472,10 +486,8 @@
       </div>
     </div>
 
-    <div class="project-container">
-      <h1 style="text-align: center; margin-bottom: 50px" id="projects">
-        Projektit
-      </h1>
+    <div class="project-container" id="projects">
+      <h1 style="text-align: center; margin-bottom: 50px">Projektit</h1>
       <div class="projects-cards">
         <a href="stunite.html">
           <div class="project">
@@ -492,7 +504,7 @@
     </div>
 
     <div class="contact-container">
-      <h1 style="text-align: center" id="Yhteystiedot">Yhteystiedot</h1>
+      <h1 style="text-align: center" id="contact">Yhteystiedot</h1>
       <div class="contact-card">
         <div class="contact-item">
           <span class="material-symbols-outlined"> mail </span>
