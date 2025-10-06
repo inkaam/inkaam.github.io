@@ -3,691 +3,686 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inka Männikkö - TC Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: auto;
-        background-color: #f4f4f4;
-      }
-      h1,
-      h2,
-      h3 {
-        color: #333;
-      }
-      h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-      p,
-      ul {
-        font-size: 1.1em;
-        line-height: 1.6em;
-      }
-      ul {
-        list-style-type: disc;
-        margin-left: 20px;
-      }
-      .section {
-        background: #ffffff;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 1000px;
-        margin: auto;
-        margin-bottom: 20px;
-      }
-      .skills-goals {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-      }
-      .skills,
-      .goals {
-        flex: 1;
-      }
-      .skills h3,
-      .goals h3 {
-        margin-top: 0;
-      }
-      @media (max-width: 768px) {
-        .skills-goals {
-          flex-direction: column;
-        }
-      }
-      .example {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        max-width: 900px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-      }
-      .text-content {
-        flex: 1;
-        max-width: 50%;
-      }
-      .gif-container {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-      }
-      .gif-container img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
-      }
-      pre {
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-radius: 5px;
-        overflow-y: auto;
-        max-height: 250px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-      }
-
-      header {
-        position: relative;
-        height: 100vh;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 100px;
-      }
-
-      .background-images {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 300%;
-
-        height: 100%;
-        display: flex;
-        animation: scrollBackground 90s infinite linear;
-        z-index: 0;
-      }
-
-      .background-images img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        margin-right: 100px;
-      }
-
-      @keyframes scrollBackground {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-150%);
-        }
-      }
-
-      .start-text {
-        z-index: 3;
-        background-color: white;
-        padding: 20px;
-        border-radius: 15px;
-      }
-
-
-
-      .image-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px; 
-        width: 100%; 
-        height: auto; 
-        padding: 10px; 
-      }
-
-
-      .image-grid img {
-        width: 70%; 
-        height: auto; 
-        object-fit: cover;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-        border-radius: 10px;
-      }
-      .image-grid img:hover {
-        transform: scale(1.1) translateY(-10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-      }
-
-
-      .header-container {
-        display: flex;
-        gap: 30px;
-      }
-      .header-text {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-      }
-
-      .header-image {
-        background-color: rgb(119, 119, 119);
-        width: 450px;
-        height: 450px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .header-image img {
-        max-width: 400px;
-        max-height: 400px;
-        border-radius: 50%
-      }
-
-      nav {
-        display: flex;
-        gap: 40px;
-        justify-content: right;
-        margin-right: 200px;
-      }
-
-      .projects-buttons {
-        display: flex;
-      }
-
-      .project {
-        background-color: #a6b6b2;
-        width: 300px;
-        text-align: center;
-        border-radius: 40px;
-        padding: 2px 30px;
-        
-      }
-      .project-img {
-        max-width: 300px;
-        height: 200px;
-      }
-
-
-    </style>
+    <title>STUNITE Projekti - Inka Männikkö Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back,code,description,github,play_arrow,school"
+    />
+    <link rel="stylesheet" href="styles2.css" />
   </head>
+
   <body>
-    <nav>
-      <a href="index.html">
-        <p>Etusivu</p>
-      </a>
-     
-      <p>Projektit</p>
-      <p>CV</p>
-      <p>Yhteystiedot</p>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-back">
+          <span class="material-symbols-outlined">arrow_back</span>
+          <span>Takaisin portfolioon</span>
+        </a>
+        <div class="nav-title">STUNITE Projekti</div>
+      </div>
     </nav>
-    <h2>STUNITE</h2>
-    <section class="section">
-      <h2>STUNITE</h2>
-      <p>
-        STUNITE on viiden tietojenkäsittelyopiskelijan Ticorporate-projekti
-        syksyltä 2024. Sovellus on suunnattu tapahtumakävijöille ja
-        -järjestäjille, tavoitteena tuoda opiskelijatapahtumat laajemmin esille
-        ja edistää eri järjestöjen välistä yhteistyötä.
-      </p>
-      <p>
-        Projektissa roolit jakautuivat Backend- ja Frontend-kehittäjään (sivuroolina molemmilla testaus), 
-        pilvipalveluosaajaan, UI/UX-suunnittelija & sisällöntuottajaan (sivuroolina molemmilla Scrum Master) sekä 
-        liiketoimintaan keskittyvään osaajaan (sivuroolina Product Owner). Oma pääroolini oli Frontend-kehittäjä, 
-        ja sivuroolissani toimin siis testaajana.
-      </p>
-      <h2>Roolini Frontend koodarina</h2>
-      <p>
-        Frontend koodaajan rooli on tärkeä, koska ilman sitä käyttäjällä ei ole
-        mitää nähtävää tai koettavaa projektista. Roolissa pääsin
-        työskentelemään tiiviisti niin Backend osaajan kanssa, että UI/UX
-        suunnittelijan kanssa. Näin saimme yhdessä aikaan suunnitellun näköisen
-        ja backendin tietoja sekä metodeja käyttävän kokonaisuuden.
-      </p>
-      <!-- <p>
-        Oma rooli kuitenkin tuntui välillä hieman raskaalta, koska olin lähinnä
-        yksin vastuussa Frontendissä, kun kaikilla ei ollut kokemusta asiasta.
-        Autoimme kuitenkin toisiamme parhaamme mukaan toisen tekniikkaan
-        keskittyvän osaajan kanssa. Sain myös myöhemmin apua sivuston CSS:ään ja
-        sisältöön UI/UX suunnittelialta / sisällöntuottajalta.
-      </p> -->
-      <h2>Roolini testaajana</h2>
-      <p>
-        Toimin ryhmän toisena testaajana ja tein Frontendille yksikkötestejä
-        sekä End-To-End testausta Cypressillä. Valitettavasti testaaminen jäi
-        itsellä projektin loppuvaiheeseen, koska Frontend vei niin paljon aikaa.
-      </p>
+
+    <header class="hero">
+      <div class="hero-background">
+        <div class="background-images">
+          <img src="images/1.png" alt="STUNITE Screenshot 1" />
+          <img src="images/4.png" alt="STUNITE Screenshot 2" />
+          <img src="images/9.png" alt="STUNITE Screenshot 3" />
+          <img src="images/11.png" alt="STUNITE Screenshot 4" />
+          <img src="images/12.png" alt="STUNITE Screenshot 5" />
+          <img src="images/13.png" alt="STUNITE Screenshot 6" />
+        </div>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">STUNITE</h1>
+        <p class="hero-subtitle">Tapahtumakalenteri- ja julkaisualusta</p>
+        <div class="hero-tech">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">HTML & CSS</span>
+          <span class="tech-tag">Cypress</span>
+        </div>
+      </div>
+    </header>
+    <!-- Projektista yleisesti -->
+    <section class="project-overview">
+      <div class="container">
+        <div class="overview-grid">
+          <div class="overview-content">
+            <h2 class="section-title">Projektin yleiskatsaus</h2>
+            <p class="overview-text">
+              STUNITE on viiden tietojenkäsittelyopiskelijan
+              Ticorporate-projekti syksyltä 2024. Sovellus on suunnattu
+              tapahtumakävijöille ja -järjestäjille, tavoitteena tuoda
+              opiskelijatapahtumat laajemmin esille ja edistää eri järjestöjen
+              välistä yhteistyötä.
+            </p>
+            <p class="overview-text">
+              Projektissa roolit jakautuivat Backend- ja Frontend-kehittäjään,
+              pilvipalveluosaajaan, UI/UX-suunnittelija & sisällöntuottajaan
+              sekä liiketoimintaan keskittyvään osaajaan.
+              <strong>Oma pääroolini oli Frontend-kehittäjä</strong>, ja
+              sivuroolissani toimin testaajana. Sovellus ei ole tällä hetkellä
+              tuotantokäytössä
+            </p>
+          </div>
+          <div class="overview-stats">
+            <div class="stat-card">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Tiimin jäsentä</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">3kk</div>
+              <div class="stat-label">Projektin kesto</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">Frontend</div>
+              <div class="stat-label">Päärooli</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="section">
-      <h2>Mitä sain aikaan?:</h2>
-      <div style="margin-bottom: 50px;">
-        <ul>
-          <li>Suurimman osan sivujen HTML ja CSS</li>
-          <li>Normikäyttäjän sekä järjestäjän sisään- ja uloskirjautuminen</li>
-          <li>Normikäyttäjän rekisteröityminen</li>
-          <li>Normikäyttäjän profiilisivu, jossa voi muokata tietoja</li>
-          <li>Etusivulle kolmannen osapuolen NPM paketin avulla kalenteri ja siihe näkymään tapahtumat</li>
-          <li>Järjestäjäkalenteri(sekä tapahtumat listamuodossa), jossa näkyy kaikkien järjestävien alustavat ja vahvistetut tapahtumasuunnitelmat</li>
-          <li>Tapahtuman luominen, muokkaaminen ja poistaminen mahdollisuus tapahtuman järjestsäjille</li>
-          <li>Tapahtumat -sivu, jossa tulevaisuuden julkaistut ja vahvistetut tapahtumat</li>
-          <li>Tapahtuma-arkisto -sivu, jossa menneet julkaistut ja vahvistetut tapahtumat</li>
-          <li>Haku ja filteröinti Tapahtumat ja Tapahtuma-arkisto sivuille</li>
-          <li>Järjestäjäkalenterin filteröinti</li>
-          <li>Tapahtumakohtaiset sivut jokaiselle tapahtumalle, jossa löytyy tapahtumat tiedot, linkki lipunmyyntii sekä osoite kartalla</li>
-          <li>Sivuston responsiivisuus</li>
-          <li>Pieni määrä E2E ja yksikkötestejä</li>
-        </ul>
-      </div>
-<h2>Esimerkkejä:</h2>
-      <div class="example">
-        <div class="text-content">
-          <p><strong>Tapahtumahaku suodatus:</strong></p>
-          <p>
-            UpdateFilteredEvents(eventsData: Event[]) päivittää suodatetut
-            tapahtumat käyttäjän hakutermien ja valintojen perusteella. Se myös
-            lajittelee tulokset aikajärjestykseen alkamispäivän mukaan.
-            Suodatetut tapahtumat tallennetaan filteredEventData - muuttujaan.
-          </p>
-          <pre> <code>
-            updateFilteredEvents(eventsData: Event[]) {
-              this.filteredEventData = computed(() => {
-                const search = this.searchTerm().toLowerCase();
-                const city = this.selectedCity();
-                const tag = this.selectedTag();
-                const { start, end } = this.selectedDateRange();
-          
-                let filteredEvents = eventsData.filter((event) => {
-                  const matchesSearch = event.eventName.toLowerCase().includes(search);
-                  const matchesCity = city ? event.city === city : true;
-                  const matchesTag = tag ? event.eventTags?.includes(tag) : true;
-          
-                  let matchesDate = true;
-                  if (start || end) {
-                    const eventStartDate = this.parseCustomDate(event.date);
-                    matchesDate =
-                      (!start || eventStartDate >= new Date(start)) &&
-                      (!end || eventStartDate <= new Date(end));
-                  }
-          
-                  const currentDate = new Date();
-                  currentDate.setHours(0, 0, 0, 0);
-          
-                  // Use endingDate if available, otherwise fallback to event.date (starting date)
-                  const eventEndDate = event.endingDate
-                    ? this.parseCustomDate(event.endingDate)
-                    : this.parseCustomDate(event.date); // Fall back to starting date
-                  eventEndDate.setHours(0, 0, 0, 0);
-          
-                  const isFutureEvent = eventEndDate >= currentDate;
-          
-                  return (
-                    matchesSearch &&
-                    matchesCity &&
-                    matchesTag &&
-                    matchesDate &&
-                    isFutureEvent
-                  );
-                });
-          
-                filteredEvents = filteredEvents.sort((a, b) => {
-                  const dateA = this.parseCustomDate(a.date);
-                  const dateB = this.parseCustomDate(b.date);
-                  return dateA.getTime() - dateB.getTime();
-                });
-          
-                return filteredEvents;
-              });
-            }
-          </code> </pre>
-        </div>
-        <div class="gif-container">
-          <img
-            src="images/suodatus_gif.gif"
-            alt="GIF, jossa demostroidaan suodatus toiminnallisuutta"
-          />
+    <!-- Minun roolini projektissa -->
+    <section class="my-role">
+      <div class="container">
+        <h2 class="section-title">Roolini projektissa</h2>
+        <div class="role-grid">
+          <div class="role-card primary">
+            <div class="role-icon">
+              <span class="material-symbols-outlined">code</span>
+            </div>
+            <h3>Frontend-kehittäjä</h3>
+            <p>
+              Frontend-kehittäjän rooli oli keskeinen käyttäjäkokemuksen
+              luomisessa. Työskentelin tiiviisti Backend-osaajan ja
+              UI/UX-suunnittelijan kanssa luodaksemme yhtenäisen ja toimivan
+              kokonaisuuden.
+            </p>
+          </div>
+          <div class="role-card">
+            <div class="role-icon">
+              <span class="material-symbols-outlined">play_arrow</span>
+            </div>
+            <h3>Testaaja</h3>
+            <p>
+              Sivuroolissani testaajana toteutin Frontend-sovellukselle
+              yksikkötestejä sekä End-To-End-testausta Cypressillä
+              varmistaakseni sovelluksen laadun.
+            </p>
+          </div>
         </div>
       </div>
-      <hr />
-      <div class="example">
-        <div class="text-content">
-          <p><strong>Järjestäjäkalenteri:</strong></p>
-          <p>
-  eventsUpdated() hakee kaikki tapahtumat ja suodattaa ne käyttäjän valintojen perusteella. Se suodattaa tapahtumat valitun kaupungin (selectedCity), valittujen tunnisteiden (selectedTags) ja valitun järjestäjän (selectedOrganizer) perusteella. Tämän jälkeen funktio jakaa tapahtumat tuleviin ja menneisiin tapahtumiin: tulevat tapahtumat järjestetään aikajärjestykseen vanhimmasta uusimpaan, ja menneet tapahtumat järjestetään uusimmasta vanhimpaan. Lopuksi se päivittää kalenterin tapahtumatiedot suodatettujen tapahtumien perusteella. Funktio kutsutaan aina, kun käyttäjä muuttaa kaupunkia, tunnisteita tai järjestäjää (onCityChange, onTagChange, onOrganizerChange).
-          </p>
-          <pre><code>
-  eventsUpdated() {
-      const eventsData = this.events();
+    </section>
+    <!-- Mitä sain aikaan projektissa -->
+    <section class="achievements">
+      <div class="container">
+        <h2 class="section-title">Mitä sain aikaan</h2>
+        <div class="achievements-grid">
+          <div class="achievement-category">
+            <h3>Käyttöliittymä & Sivurakenne</h3>
+            <ul>
+              <li>Suurimman osan sivujen HTML ja CSS</li>
+              <li>Sivuston responsiivisuus</li>
+              <li>Käyttäjäystävällinen navigaatio</li>
+            </ul>
+          </div>
+          <div class="achievement-category">
+            <h3>Käyttäjähallinta</h3>
+            <ul>
+              <li>
+                Normikäyttäjän ja järjestäjän sisään- ja uloskirjautuminen
+              </li>
+              <li>Normikäyttäjän rekisteröityminen</li>
+              <li>Käyttäjän profiilisivu tietojen muokkauksella</li>
+            </ul>
+          </div>
+          <div class="achievement-category">
+            <h3>Tapahtumaominaisuudet</h3>
+            <ul>
+              <li>
+                Etusivun ja järjestäjänäkymän kalenterit NPM-pakettia hyödyntäen
+              </li>
+              <li>Tapahtuman luominen, muokkaaminen ja poistaminen</li>
+              <li>Tapahtumakohtaiset sivut kartalla ja lipunmyyntilinkeillä</li>
+            </ul>
+          </div>
+          <div class="achievement-category">
+            <h3>Haku & Suodatus</h3>
+            <ul>
+              <li>Haku ja filteröinti Tapahtumat-sivulle</li>
+              <li>Tapahtuma-arkisto menneiden tapahtumien selaamiseen</li>
+              <li>Järjestäjäkalenterin monipuolinen suodatus</li>
+            </ul>
+          </div>
+          <div class="achievement-category">
+            <h3>Testaus</h3>
+            <ul>
+              <li>End-to-End testit Cypressillä</li>
+              <li>Yksikkötestit kriittisille toiminnoille</li>
+              <li>Käyttäjäpolkujen validointi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Koodiesimerkkejä -->
+    <section class="code-examples">
+      <div class="container">
+        <h2 class="section-title">Koodiesimerkkejä ja toiminnallisuuksia</h2>
+        <div class="example-card">
+          <div class="example-header">
+            <h3>Tapahtumahaku ja suodatus</h3>
+          </div>
+          <div class="example-content">
+            <div class="example-description">
+              <p>
+                <code style="font-size: larger">updateFilteredEvents()</code>
+                päivittää suodatetut tapahtumat käyttäjän hakutermien ja
+                valintojen perusteella. Funktio tukee hakua nimen, kaupungin,
+                tagien ja päivämäärävälin perusteella, ja lajittelee tulokset
+                aikajärjestykseen.
+              </p>
+              <div class="example-tags">
+                <span class="tag">Reaaliaikainen haku</span>
+                <span class="tag">Monikriittinen suodatus</span>
+                <span class="tag">Tulosten järjestäminen</span>
+              </div>
+            </div>
+            <div class="example-media">
+              <img
+                src="images/suodatus_gif.gif"
+                alt="Suodatustoiminnallisuuden demo"
+              />
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-title">event-filter.service.ts</span>
+              <div class="code-buttons">
+                <button class="code-button" onclick="toggleCode(this)">
+                  Näytä koodi
+                </button>
+              </div>
+            </div>
+            <pre><code id="code">updateFilteredEvents(eventsData: Event[]) {
+  this.filteredEventData = computed(() => {
+    const search = this.searchTerm().toLowerCase();
+    const city = this.selectedCity();
+    const tag = this.selectedTag();
+    const { start, end } = this.selectedDateRange();
+
+    let filteredEvents = eventsData.filter((event) => {
+      const matchesSearch = event.eventName.toLowerCase().includes(search);
+      const matchesCity = city ? event.city === city : true;
+      const matchesTag = tag ? event.eventTags?.includes(tag) : true;
+
+      let matchesDate = true;
+      if (start || end) {
+        const eventStartDate = this.parseCustomDate(event.date);
+        matchesDate =
+          (!start || eventStartDate >= new Date(start)) &&
+          (!end || eventStartDate <= new Date(end));
+      }
+
       const currentDate = new Date();
+      currentDate.setHours(0, 0, 0, 0);
 
-      let filteredEvents = eventsData;
+      const eventEndDate = event.endingDate
+        ? this.parseCustomDate(event.endingDate)
+        : this.parseCustomDate(event.date);
+      eventEndDate.setHours(0, 0, 0, 0);
 
-      if (this.selectedCity) {
-        filteredEvents = filteredEvents.filter(
-          (event) => event.city.toLowerCase() === this.selectedCity.toLowerCase()
+      const isFutureEvent = eventEndDate >= currentDate;
+
+      return (
+        matchesSearch &&
+        matchesCity &&
+        matchesTag &&
+        matchesDate &&
+        isFutureEvent
+      );
+    });
+
+    filteredEvents = filteredEvents.sort((a, b) => {
+      const dateA = this.parseCustomDate(a.date);
+      const dateB = this.parseCustomDate(b.date);
+      return dateA.getTime() - dateB.getTime();
+    });
+
+    return filteredEvents;
+  });
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="example-card">
+          <div class="example-header">
+            <h3>Järjestäjäkalenteri</h3>
+          </div>
+          <div class="example-content">
+            <div class="example-description">
+              <p>
+                <code style="font-size: larger">eventsUpdated()</code> hallinnoi
+                järjestäjäkalenterin tapahtumien näyttämistä ja suodatusta.
+                Funktio jakaa tapahtumat tuleviin ja menneisiin, ja päivittää
+                kalenterinäkymän reaaliajassa käyttäjän valintojen mukaan.
+              </p>
+              <div class="example-tags">
+                <span class="tag">Kalenterin integraatio</span>
+                <span class="tag">Dynaaminen suodatus</span>
+              </div>
+            </div>
+            <div class="example-media">
+              <img
+                src="images/järjestäjäkalenteri_gif.gif"
+                alt="Järjestäjäkalenterin demo"
+              />
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-title">organizer-calendar.component.ts</span>
+              <div class="code-buttons">
+                <button class="code-button" onclick="toggleCode(this)">
+                  Näytä koodi
+                </button>
+              </div>
+            </div>
+            <pre><code id="code">eventsUpdated() {
+  const eventsData = this.events();
+  const currentDate = new Date();
+
+  let filteredEvents = eventsData;
+
+  // Suodata kaupungin mukaan
+  if (this.selectedCity) {
+    filteredEvents = filteredEvents.filter(
+      (event) => event.city.toLowerCase() === this.selectedCity.toLowerCase()
+    );
+  }
+
+  // Suodata tagien mukaan
+  if (this.selectedTags && this.selectedTags.length > 0) {
+    filteredEvents = filteredEvents.filter((event) =>
+      event.eventTags.includes(this.selectedTags)
+    );
+  }
+
+  // Suodata järjestäjän mukaan
+  if (this.selectedOrganizer) {
+    filteredEvents = filteredEvents.filter((event) => {
+      return (
+        event.organizationName.toLowerCase() ===
+        this.selectedOrganizer.toLowerCase()
+      );
+    });
+  }
+
+  // Jaa tuleviin ja menneisiin tapahtumiin
+  this.upcomingEvents = filteredEvents
+    .filter((event) => {
+      const eventDate = new Date(this.formatDateToISO(event.date));
+      return eventDate >= currentDate;
+    })
+    .sort((a, b) => {
+      const dateA = new Date(this.formatDateToISO(a.date) + 'T' + a.startingTime);
+      const dateB = new Date(this.formatDateToISO(b.date) + 'T' + b.startingTime);
+      return dateA.getTime() - dateB.getTime();
+    });
+
+  // Päivitä kalenterinäkymä
+  if (filteredEvents.length > 0) {
+    this.calendarOptions.events = filteredEvents.map((event) => ({
+      title: event.eventName,
+      date: this.formatDateToISO(event.date),
+      color: event.status === 'Varattu' ? '#fe7775' : '#f0d37c',
+      url: `/events/${event._id}`,
+      extendedProps: {
+        startingTime: event.startingTime,
+        venue: event.venue,
+        organizationName: event.organizationName,
+        eventId: event._id,
+      },
+    }));
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="example-card">
+          <div class="example-header">
+            <h3>Tapahtuman statushallinta</h3>
+          </div>
+          <div class="example-content">
+            <div class="example-description">
+              <p>
+                <code style="font-size: larger">getPublishedEvents()</code>
+                suodattaa tapahtumat niin, että vain vahvistetut ja julkaistut
+                tapahtumat näkyvät käyttäjille. Järjestäjäkalenterissa
+                värikoodaus auttaa erottamaan alustavat ja vahvistetut
+                tapahtumat.
+              </p>
+              <div class="example-tags">
+                <span class="tag">Julkaisun hallinta</span>
+                <span class="tag">Visuaalinen erottelu</span>
+              </div>
+            </div>
+            <div class="example-media">
+              <img src="images/statukset_gif.gif" alt="Statushallinta demo" />
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-title">event.service.ts</span>
+              <div class="code-buttons">
+                <button class="code-button" onclick="toggleCode(this)">
+                  Näytä koodi
+                </button>
+              </div>
+            </div>
+            <pre><code id="code">getPublishedEvents(): Observable<Event[]> {
+  return this.http.get<Event[]>(this.apiUrl).pipe(
+    map((events) =>
+      events.filter((event) => {
+        const now = new Date();
+        const publishDate = new Date(event.publishDateTime);
+
+        return (
+          event.status === 'Varattu' &&
+          event.publishDateTime != null &&
+          publishDate <= now
         );
-      }
-
-      if (this.selectedTags && this.selectedTags.length > 0) {
-        filteredEvents = filteredEvents.filter((event) =>
-          event.eventTags.includes(this.selectedTags)
-        );
-      }
-
-      this.noEventsForTag = filteredEvents.length === 0;
-
-      if (this.selectedOrganizer) {
-        filteredEvents = filteredEvents.filter((event) => {
-          return (
-            event.organizationName.toLowerCase() ===
-            this.selectedOrganizer.toLowerCase()
-          );
-        });
-      }
-
-      this.upcomingEvents = filteredEvents
-        .filter((event) => {
-          const eventDate = new Date(this.formatDateToISO(event.date));
-          return eventDate >= currentDate;
-        })
-        .sort((a, b) => {
-          const dateA = new Date(
-            this.formatDateToISO(a.date) + 'T' + a.startingTime
-          );
-          const dateB = new Date(
-            this.formatDateToISO(b.date) + 'T' + b.startingTime
-          );
-          return dateA.getTime() - dateB.getTime();
-        });
-
-      this.pastEvents = filteredEvents
-        .filter((event) => {
-          const eventDate = new Date(this.formatDateToISO(event.date));
-          return eventDate < currentDate;
-        })
-        .sort((a, b) => {
-          const dateA = new Date(
-            this.formatDateToISO(a.date) + 'T' + a.startingTime
-          );
-          const dateB = new Date(
-            this.formatDateToISO(b.date) + 'T' + b.startingTime
-          );
-          return dateB.getTime() - dateA.getTime();
-        });
-
-      if (filteredEvents.length > 0) {
-        this.calendarOptions.events = filteredEvents.map((event) => ({
-          title: event.eventName,
-          date: this.formatDateToISO(event.date),
-          color: event.status === 'Varattu' ? '#fe7775' : '#f0d37c',
-          url: `/events/${event._id}`,
-          extendedProps: {
-            startingTime: event.startingTime,
-            venue: event.venue,
-            date: event.date,
-            organizationName: event.organizationName,
-            eventId: event._id,
-          },
-        }));
-      } else {
-        this.calendarOptions.events = [];
-      }
-    }
-            
-    onCityChange(city: string): void {
-      this.selectedCity = city;
-      this.eventsUpdated();
-    }
-    onTagChange(selectedTag: string): void {
-      this.selectedTags = selectedTag;
-      this.eventsUpdated();
-    }
-    onOrganizerChange(selectedOrganizer: string): void {
-      this.selectedOrganizer = selectedOrganizer;
-      this.eventsUpdated();
-    }
-
-  </code></pre>
+      })
+    )
+  );
+}
+</code></pre>
+          </div>
         </div>
-        <div class="gif-container">
-          <img
-            src="images/järjestäjäkalenteri_gif.gif"
-            alt="GIF, jossa demostroidaan normikäyttäjän sisäänkirjautumista toiminnallisuutta"
-          />
-        </div>
-      </div>
-      <hr />
-      <div class="example">
-        <div class="text-content">
-          <p>
-            <strong>Tapahtuman Alustava/Vahvistettu statuksen vaikutus:</strong>
-          </p>
-          <p>
-            getPublishedEvents() hakee tapahtumat tietokannasta, mutta suodattaa ne
-            niin, että vain vahvistetut ja julkaistut tapahtumat jäävät mukaan.
-            Tätä kutsua käytetään Tapahtumat -sivulla, jotta saadaan vain
-            julkaistut tapahtumat.
-          </p>
-          <p>
-            Järjestäjäkalenterissa on hyödynnetty värejä selkeyttämään onko
-            tapahtumalla Vahvistettu vai Alustava suunnitelma status.
-          </p>
-  <pre><code>
-            getPublishedEvents(): Observable<Event[]> {
-              return this.http.get<Event[]>(this.apiUrl).pipe(
-                map((events) =>
-                  events.filter((event) => {
-                    const now = new Date();
-                    const publishDate = new Date(event.publishDateTime);
-          
-                    return (
-                      event.status === 'Varattu' &&
-                      event.publishDateTime != null &&
-                      publishDate <= now
-                    );
-                  })
-                )
-              );
-            }
-  </code></pre>
-        </div>
-        <div class="gif-container">
-          <img
-            src="images/statukset_gif.gif"
-            alt="GIF, jossa demostroidaan alustava/vahvistettu statuksen vaikutusta"
-          />
+
+        <div class="example-card">
+          <div class="example-header">
+            <h3>End-to-End testaus Cypressillä</h3>
+          </div>
+          <div class="example-content">
+            <div class="example-description">
+              <p>
+                E2E-testi, joka testaa koko tapahtuman elinkaaren: järjestäjän
+                sisäänkirjautumisen, tapahtuman luomisen, sen näkyvyyden eri
+                näkymissä ja lopulta poistamisen. Testi varmistaa kriittisten
+                toimintojen toimivuuden.
+              </p>
+              <div class="example-tags">
+                <span class="tag">Cypress</span>
+                <span class="tag">E2E Testaus</span>
+              </div>
+            </div>
+            <div class="example-media">
+              <img
+                src="images/cypress_gif.gif"
+                alt="Cypress testien suoritus"
+              />
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-title">create-event.cy.ts</span>
+              <div class="code-buttons">
+                <button class="code-button" onclick="toggleCode(this)">
+                  Näytä koodi
+                </button>
+              </div>
+            </div>
+            <pre><code id="code">describe('Create Event', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:4200/');
+    
+    // Avaa kirjautumismodaali
+    cy.get('.login-icon > .material-symbols-outlined')
+      .should('be.visible')
+      .click();
+
+    // Siirry järjestäjän kirjautumiseen
+    cy.get('.login-buttons > :nth-child(2)').click();
+
+    // Kirjaudu sisään
+    const email = Cypress.env('CYPRESS_ORGANIZER_EMAIL');
+    const password = Cypress.env('CYPRESS_ORGANIZER_PASSWORD');
+    
+    cy.get('#email').type(email);
+    cy.get('#password').type(password);
+    cy.get('form.ng-dirty > button').click();
+
+    // Varmista onnistunut kirjautuminen
+    cy.url().should('include', '/organizer-view');
+  });
+  
+  it('luo tapahtuma ja varmista sen näkyvyys', () => {
+    // Siirry tapahtuman luomiseen
+    cy.get('.organizer-buttons > :nth-child(1)').click();
+
+    // Täytä lomake
+    cy.get('input[name="eventName"]').type('TestiTapahtumaCypress');
+    cy.get('[name="eventDate"]').type(formattedDate);
+    cy.get('[name="eventTime"]').type('12:00');
+    cy.get('input[name="city"]').type('Helsinki');
+    cy.get('input[name="venue"]').type('Messukeskus');
+    cy.get('textarea[name="details"]').type('Testitapahtuman kuvaus.');
+    
+    // Lähetä lomake
+    cy.get('form.create-event-form').submit();
+
+    // Varmista onnistunut luominen
+    cy.get('.ng-trigger')
+      .should('contain', 'Tapahtuman luonti onnistui.');
+
+    // Tarkista näkyvyys järjestäjän näkymässä
+    cy.get('.page-container > :nth-child(3)')
+      .should('contain', 'TestiTapahtumaCypress');
+  });
+
+  it('poista tapahtuma ja varmista poistuminen', () => {
+    cy.get('.your-events')
+      .contains('.event-name', 'TestiTapahtumaCypress')
+      .parents('.your-events')
+      .within(() => {
+        cy.contains('Poista').click();
+      });
+
+    cy.on('window:confirm', () => true);
+    
+    cy.get('.events-div')
+      .should('not.contain', 'TestiTapahtumaCypress');
+  });
+});</code></pre>
+          </div>
         </div>
       </div>
-      <hr>
-      <div class="example">
-        <div class="text-content">
-          <p><strong>Cypress testi, Tapahtuman luominen ja poistaminen:</strong></p>
-          <p>
-            Testissä tarkistetaan, että järjestäjä voi kirjautua sisään, 
-            luoda tapahtuman syöttämällä tarvittavat tiedot, varmistaa sen 
-            näkyvyyden järjestäjän kalenterissa ja tapahtumasivulla sekä lopuksi
-             poistaa tapahtuman ja varmistaa sen katoamisen järjestelmästä.
-          </p>
-          <pre> <code>
-            const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(today.getDate() + 1);
-            
-            const formattedDate = tomorrow.toISOString().split('T')[0];
-            const formattedTime = '12:00';
-            
-            describe('Create Event', () => {
-              beforeEach(() => {
-                // go to home page
-                cy.visit('http://localhost:4200/');
-            
-                // open login modal
-                cy.get('.login-icon > .material-symbols-outlined')
-                  .should('be.visible')
-                  .click();
-            
-                // check if modal is open
-                cy.get('.modal-content').should('be.visible');
-            
-                // go to organizer log in
-                cy.get('.login-buttons > :nth-child(2)').should('be.visible').click();
-            
-                // log in credentials come from cypress.env.json
-                const email = Cypress.env('CYPRESS_ORGANIZER_EMAIL');
-                const password = Cypress.env('CYPRESS_ORGANIZER_PASSWORD');
-            
-                // write email and password
-                cy.get('#email').should('be.visible').type(email);
-                cy.get('#password').should('be.visible').type(password);
-            
-                // press log in button
-                cy.get('form.ng-dirty > button').click();
-            
-                // check if success log in toaster is visible
-                cy.get('.ng-trigger').should('be.visible');
-            
-                // check if url has /organizer-view (routes to organizer-view after succesful login)
-                cy.url().should('include', '/organizer-view');
-              });
-              
-              it('go to create event form and create event', () => {
-                // press create event button
-                cy.get('.organizer-buttons > :nth-child(1)').should('be.visible').click();
-            
-                // set name
-                cy.get('input[name="eventName"]').type('TestiTapahtumaCypress');
-            
-                // set date and time
-                cy.get('[name="eventDate"]').clear().type(formattedDate);
-                cy.get('[name="eventTime"]').clear().type(formattedTime);
-            
-                // set ending time and date
-                cy.get('input[name="endingDate"]').clear().type(formattedDate);
-                cy.get('input[name="endingtime"]').clear().type(formattedTime);
-            
-                // set city
-                cy.get('input[name="city"]').type('Helsinki');
-            
-                // set address
-                cy.get('input[name="address"]').type('Mannerheimintie 1');
-            
-                // set event venue
-                cy.get('input[name="venue"]').type('Messukeskus');
-            
-                // set event details
-                cy.get('textarea[name="details"]').type('Tämä on testitapahtuman kuvaus.');
-            
-                // set ticketprices
-                cy.get('input[name="ticketpriceMin"]').type('20');
-                cy.get('input[name="ticketpriceMax"]').type('50');
-            
-                // set ticketsale times
-                cy.get('input[name="ticketSaleStart"]').type('2024-04-01T10:00');
-                cy.get('input[name="ticketSaleEnd"]').type('2024-04-30T23:59');
-            
-                // set status
-                cy.get('select[name="status"]').select('Varattu');
-            
-                // set publish date and time
-                cy.get('input[name="publishDateTime"]').type('2024-04-01T12:00');
-            
-                // set events tags
-                cy.get('.tag-checkbox input[type="checkbox"]').first().check();
-            
-                // set event image
-                cy.get('input[type="file"]').selectFile(
-                  'cypress/fixtures/cypress-logo.jpg'
-                );
-            
-                // send form
-                cy.get('form.create-event-form').submit();
-            
-                // check if create event success toaster is visible
-                cy.get('.ng-trigger')
-                  .should('be.visible')
-                  .and('contain', 'Tapahtuman luonti onnistui.');
-            
-                // check if event is in Your events, future events container
-                cy.get('.page-container > :nth-child(3)').should(
-                  'contain',
-                  'TestiTapahtumaCypress'
-                );
-              });
-            
-              it('check that organizer calender has the created event and works', () => {
-                // go to organzier calendar
-                cy.get('.organizer-buttons > :nth-child(2)').click();
-                cy.url().should('include', '/organizer-view/organizer-calendar');
-            
-                // check if calendar is loaded and has the event
-                cy.get('.full-calendar')
-                  .should('be.visible')
-                  .contains('.fc-event-title-container', 'TestiTapahtumaCypress')
-                  .should('be.visible')
-                  .trigger('mouseover');
-            
-                // hover event and check it has information like name
-                cy.get('.event-calendar-hover')
-                  .should('be.visible')
-                  .should('contain', 'TestiTapahtumaCypress');
-                // click event and check that it goes to correct event-detail page
-                cy.get('.full-calendar')
-                  .should('be.visible')
-                  .contains('.fc-event-title-container', 'TestiTapahtumaCypress')
-                  .click();
-                cy.get('.page-container').should('contain', 'TestiTapahtumaCypress');
-              });
-            
-              it('check that event is the events page', () => {
-                cy.visit('/events');
-                cy.get('.events').should('contain', 'TestiTapahtumaCypress');
-              });
-            
-              it('delete event and check that it is gone', () => {
-                // find event element that contains TestiTapahtumaCypress event name
-                cy.get('.your-events')
-                  .contains('.event-name', 'TestiTapahtumaCypress')
-                  .parents('.your-events')
-                  .within(() => {
-                    // clicks delete button inside div that contains
-                    cy.contains('Poista').click();
-                  });
-            
-                // confirm deletion
-                cy.on('window:confirm', () => true);
-            
-                // check that event is deleted
-                cy.get('.events-div').should('not.contain', 'TestiTapahtumaCypress');
-              });
-            });
-               
-          </code> </pre>
-        </div>
-        <div class="gif-container">
-          <img
-            src="images/cypress_gif.gif"
-            alt="GIF, jossa bäytetään Cypress testin suorittamista"
-          />
+    </section>
+    <!-- Projektin mobiili -->
+    <section class="mobile-showcase">
+      <div class="container">
+        <h2 class="section-title">Mobiiliresponsiivisuus</h2>
+        <p class="section-subtitle">
+          Sovellus on suunniteltu toimimaan saumattomasti kaikilla laitteilla
+        </p>
+        <div class="mobile-grid">
+          <div class="mobile-device">
+            <img src="images/m2.png" alt="Mobiili etusivu" />
+            <div class="mobile-caption">Etusivu</div>
+          </div>
+          <div class="mobile-device">
+            <img src="images/m1.png" alt="Mobiili tapahtumat" />
+            <div class="mobile-caption">Tapahtumat</div>
+          </div>
+
+          <div class="mobile-device">
+            <img src="images/m4.png" alt="Mobiili rekisteröityminen" />
+            <div class="mobile-caption">Rekisteröityminen</div>
+          </div>
+          <div class="mobile-device">
+            <img src="images/m5.png" alt="Mobiili järjestäjänäkymä" />
+            <div class="mobile-caption">Järjestäjänäkymä</div>
+          </div>
+          <div class="mobile-device">
+            <img src="images/m6.png" alt="Mobiili järjestäjäkalenteri" />
+            <div class="mobile-caption">Järjestäjäkalenteri</div>
+          </div>
         </div>
       </div>
-      <h3>Mobiili</h3>
-      <div class="image-grid">
-        <img src="images/m1.png" alt="Image 1">
-        <img src="images/m2.png" alt="Image 2">
-        <img src="images/m3.png" alt="Image 3">
-        <img src="images/m4.png" alt="Image 4">
-        <img src="images/m5.png" alt="Image 5">
-        <img src="images/m6.png" alt="Image 6">
-      </div>
-      
     </section>
 
-    <footer>
-      <p style="text-align: center;">&copy; 2025 Inka Männikkö</p>
+    <section class="project-reflection">
+      <div class="container">
+        <h2 class="section-title">Projektin oppimiskokemukset</h2>
+        <div class="reflection-grid">
+          <div class="reflection-card">
+            <h3>Tekninen kasvu</h3>
+            <p>
+              Projekti syvensi Angular- ja TypeScript-osaamistani merkittävästi.
+              Opin erityisesti reaktiivisen ohjelmoinnin periaatteita ja
+              komponenttien välistä kommunikointia.
+            </p>
+          </div>
+          <div class="reflection-card">
+            <h3>Tiimityöskentely</h3>
+            <p>
+              Työskentely monitaitoisessa tiimissä opetti arvokkaita
+              yhteistyötaitoja. Frontend- ja Backend-kehittäjien sekä
+              käyttöliittymän suunnittelijan välinen kommunikointi oli
+              kriittistä projektin onnistumiselle.
+            </p>
+          </div>
+          <div class="reflection-card">
+            <h3>Laadunvarmistus</h3>
+            <p>
+              Cypress-testien kirjoittaminen opetti testivetoisen kehityksen
+              merkityksen. Automaattiset testit varmistivat sovelluksen
+              luotettavuuden ja helpottivat jatkokehitystä.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="thesis-section">
+      <div class="container">
+        <div class="thesis-card">
+          <div class="thesis-content">
+            <h2 class="thesis-title">STUNITE-projektin jatkokehitys</h2>
+            <p class="thesis-description">
+              Tein opinnäytetyöni STUNITE-projektin jatkokehityksestä,
+              keskittyen käytettävyyden arviointiin ja parantamiseen. Työssä
+              arvioin alkuperäisen sovelluksen käytettävyyttä heuristisen
+              arvioinnin avulla ja korjasin löydettyjä käytettävyysongelmia.
+            </p>
+            <div class="thesis-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">🔍</span>
+                <span>Käytettävyyden arviointi</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🎨</span>
+                <span>UI/UX-parannukset</span>
+              </div>
+            </div>
+            <a
+              href="https://urn.fi/URN:NBN:fi:amk-2025092725285"
+              class="thesis-link"
+            >
+              <span class="material-symbols-outlined">description</span>
+              <span>Lue opinnäytetyö</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <h3>STUNITE Projekti</h3>
+            <p>Frontend-kehitys ja testaus • Syksy 2024</p>
+          </div>
+          <div class="footer-right">
+            <a href="index.html" class="footer-link">
+              <span class="material-symbols-outlined">arrow_back</span>
+              Takaisin portfolioon
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Inka Männikkö. Kaikki oikeudet pidätetään.</p>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      function toggleCode(button) {
+        const codeBlock = button.closest('.code-block').querySelector('pre');
+
+        if (
+          codeBlock.style.display === 'none' ||
+          codeBlock.style.display === ''
+        ) {
+          codeBlock.style.display = 'block';
+          codeBlock.style.transition = 'all 0.8s ease';
+          button.textContent = 'Piilota koodi';
+        } else {
+          codeBlock.style.display = 'none';
+          button.textContent = 'Näytä koodi';
+        }
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        });
+      });
+
+      window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(
+          '.example-card, .role-card, .achievement-category, .mobile-device, .reflection-card'
+        )
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
   </body>
 </html>
