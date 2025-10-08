@@ -707,6 +707,27 @@ footer p {
   .header-text {
     max-width: 100%;
   }
+  .header-desc {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .status {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tech-logos {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 
   .about-content {
     grid-template-columns: 1fr;
@@ -726,22 +747,35 @@ footer p {
   .nav-menu {
     gap: 1rem;
   }
-
+  .header-container {
+    margin-top: 50px;
+  }
   .header-title {
     font-size: 2.5rem;
   }
 
   .header-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+  }
+  .header-desc {
+    font-size: 1rem;
   }
 
   .section-title {
     font-size: 2rem;
   }
 
+  .status {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .header-actions {
     flex-direction: column;
     align-items: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .btn {
@@ -751,6 +785,7 @@ footer p {
 
   .tech-logos {
     justify-content: center;
+    margin-bottom: 50px;
   }
 
   .image-wrapper {
@@ -788,5 +823,10 @@ footer p {
 
   .contact-card {
     padding: 2rem 1.5rem;
+  }
+
+  .image-wrapper {
+    width: 250px;
+    height: 250px;
   }
 }
