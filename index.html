@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inka Männikkö - TC Portfolio</title>
+    <title>Inka Männikkö - Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -15,7 +15,7 @@
   <body>
     <nav>
       <div class="nav-container">
-        <p class="nav-logo">Opiskelija portfolio</p>
+        <p class="nav-logo">Portfolio</p>
         <div class="nav-menu">
           <a href="#home" class="nav-link">
             <p>Etusivu</p>
@@ -34,7 +34,7 @@
         <div class="header-content">
           <div class="header-image">
             <div class="image-wrapper">
-              <img src="images/profile-image.jpg" alt="Inka Männikkö" />
+              <img src="images/profile-picture3.png" alt="Inka Männikkö" />
               <div class="image-decoration"></div>
             </div>
           </div>
@@ -42,19 +42,21 @@
             <div class="greeting">Hei, olen</div>
             <h1 class="header-title">Inka Männikkö</h1>
             <p class="header-subtitle">
-              Tietojenkäsittelyopiskelija & Fullstack-kehittäjä
+              Vasta valmistunut tietojenkäsittelyn tradenomi
             </p>
             <p class="header-desc">
-              Osaamiseni keskittyy frontend-kehitykseen, erityisesti Angulariin
-              ja Typescriptiin. Rakastan oppia uutta ja kokeilla erilaisia
-              teknologioita.
+              Osaamiseni keskittyy UI/UX-suunnitteluun sekä
+              frontend-kehitykseen. Opinnossani sekä projekteissani olen
+              käyttänyt Figmaan käyttöliittymien suunnitteluun ja Typescriptiä
+              Reactin ja Angularin kanssa niiden rakentamiseen. Rakastan oppia
+              uutta ja kokeilla erilaisia teknologioita.
             </p>
-            <!--
+
             <div class="status">
               <span class="status-indicator"></span>
-              <span class="status-text">Etsii harjoittelupaikkaa</span>
+              <span class="status-text">Etsii työpaikkaa</span>
             </div>
-              -->
+
             <div class="header-actions">
               <a href="#projects" class="btn btn-primary"
                 >Tutustu projekteihin</a
@@ -82,6 +84,10 @@
                   <span>TS</span>
                 </div>
                 <div class="tech-item">
+                  <img src="images/react.png" alt="React" />
+                  <span>React</span>
+                </div>
+                <div class="tech-item">
                   <img src="images/angular.png" alt="Angular" />
                   <span>Angular</span>
                 </div>
@@ -99,19 +105,29 @@
             <h2 class="section-title">Tietoa minusta</h2>
             <div class="about-description">
               <p>
-                Olen JAMKin tietojenkäsittelyn opiskelija opintojeni
-                loppuvaiheessa. Tällä hetkellä haen harjoittelupaikkaa ja
-                täydentelen samalla opintojani Fullstack Open MOOC -kurssilla.
+                Olen vasta valmistunut tietojenkäsittelijä Jyväskylän
+                ammattikorkeakoulusta. Etsin tällä hetkellä työpaikkaa
+                Fullstack- ja UI/UX-puolelta Mikkelin alueelta tai etänä. Voin
+                myös mahdollisesti muuttaa työn perässä tilaisuudesta riippuen.
               </p>
               <p>
                 Vahvinta osaamistani ovat
-                <strong>Angular ja TypeScript</strong> sekä käyttöliittymien
-                rakentaminen. Viihdyn parhaiten frontendin parissa, mutta
-                minulla on myös kokemusta backend-puolelta.
+                <strong>React, Angular ja TypeScript</strong> sekä
+                <strong>käyttöliittymien rakentaminen.</strong> Viihdyn
+                parhaiten frontendin sekä käyttöliittymäsuunnittelun parissa,
+                mutta minulla on myös perusteet backend-puolelta.
               </p>
               <p>
                 Haluan jatkuvasti oppia uutta ja kehittää osaamistani
-                monipuolisesti ohjelmistokehityksen eri osa-alueilla.
+                monipuolisesti ohjelmistokehityksen eri osa-alueilla. Mikäli työ
+                vaatii kokonaan uuden taidon tai teknologian hallitsemista, olen
+                valmis opiskelemaan.
+              </p>
+              <p>
+                Nautin sekä tiimi- että itsenäisestä työskentelystä ja tykkään
+                auttaa ihmisiä. Minulle on tärkeää saada rakentavaa palautetta
+                työstäni, jotta voin kehittyä, ja arvostan työpaikalla hyviä
+                kommunikaatiotaitoja.
               </p>
             </div>
           </div>
@@ -121,6 +137,7 @@
             <div class="skill-category">
               <h4>Frontend</h4>
               <div class="skill-tags">
+                <span class="skill-tag primary">React</span>
                 <span class="skill-tag primary">Angular</span>
                 <span class="skill-tag primary">TypeScript</span>
                 <span class="skill-tag">HTML</span>
@@ -135,6 +152,7 @@
                 <span class="skill-tag">REST API</span>
                 <span class="skill-tag">MySQL</span>
                 <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Firebase</span>
               </div>
             </div>
 
@@ -152,8 +170,10 @@
               <h4>Muut taidot</h4>
               <div class="skill-tags">
                 <span class="skill-tag">Käytettävyys</span>
+                <span class="skill-tag">Palautteen vastaanottaminen</span>
                 <span class="skill-tag">Ohjelmistotestaus -perusteet</span>
                 <span class="skill-tag">Ryhmätyöskentely</span>
+                <span class="skill-tag">Kuunteleminen</span>
                 <span class="skill-tag">Projektinhallinta</span>
               </div>
             </div>
@@ -217,6 +237,28 @@
               </div>
             </div>
           </a>
+          <a href="harjoittelu.html" class="project-card">
+            <div class="project-image">
+              <img src="images/h1.png" alt="Opinnäytetyö" />
+              <div class="project-overlay">
+                <span class="view-project">Katso projekti →</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Harjoittelu (Admin paneeli)</h3>
+              <p class="project-description">
+                Admin paneelin käyttöliittymän suunnittelu ja toteutus.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Figma</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">React Admin</span>
+                <span class="project-tag">MUI</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">CSS</span>
+              </div>
+            </div>
+          </a>
 
           <div class="project-card coming-soon">
             <div class="project-image">
@@ -269,21 +311,21 @@
           <div class="social-links">
             <h4>Löydä minut myös täältä</h4>
             <div class="github-links">
-              <a
+              <!-- <a
                 href="https://github.com/InkaMannikko"
                 class="social-link"
                 target="_blank"
               >
                 <img src="images/github-icon.png" alt="GitHub" />
                 <span>Opiskelija GitHub</span>
-              </a>
+              </a> -->
               <a
                 href="https://github.com/inkaam"
                 class="social-link"
                 target="_blank"
               >
                 <img src="images/github-icon.png" alt="GitHub" />
-                <span>Henkilökohtainen GitHub</span>
+                <span>GitHub</span>
               </a>
             </div>
           </div>
